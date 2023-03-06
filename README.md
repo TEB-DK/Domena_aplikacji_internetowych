@@ -28,6 +28,7 @@
       - Pole wprowadzania typu email powinno posiadać tekst zastępczy "Wprowadź adres email", a także atrybut wzoru, który weryfikuje poprawność wprowadzonego tekstu
         - wzór dopuszcza złożenie tekstu z dużych i małych liter alfabetu oraz cyfr, a także kropek oraz podłóg i plusów, po znaku "@" przyjmuje tylko ciąg znaków "gmail", a po znaku "." ciąg znaków "com".
       - Pola wprowadzania typu radio muszą posiadać wykorzystany atrybut "zaznaczony" dla jednego z pól.
+      - Przycisk wysłania formularza posiada atrybut "wyłączony"
   ### Stópka
   - Składa się z znacznika nagłówka stopnia piątego.
   - W stópce musi się znaleźć imie i nazwisko wykonującego projekt.
@@ -109,6 +110,8 @@
   - Wielkość czcionki: 1em
   - Kolor tekstu: contrast-color
 
+  - W trybie "wyłączony" przycisk jest wyszarzony.
+
   ### Nawigacja
   - Sposób wyświetlania: "elastyczny"
   - Elementy rozłożone typem "równo" horyzontalnie
@@ -131,3 +134,33 @@
   - Pozycja ustawiona na "lepiącą"
   - Odległość od dołu: 0
   - Odległość od lewej strony: 50%
+
+## Skrypt strony
+  
+  #### Uwcześnie proszę utworzyć konto na: [ 🔗 Elasticemail](https://elasticemail.com/account#/create-account).
+
+  #### Zaszyfrowanie danych oraz funkcja wysyłająca dane możliwe dzięki: [ 🔗 SMTPjs](https://www.smtpjs.com/).
+
+  #### Wymagania skryptu:
+  - Podłączony do strony w sekcji head
+  - Opracowany na funkcjach
+
+  #### Działanie skryptu: 
+  1. Dodać wybranie elementów DOM
+  2. Utworzyć funkcje sprawdzające zawartość elementów DOM.
+      - Sprawdzenie czy e-mail nie jest pusty
+      - Sprawdzenie jaka wartość jest zaznaczona w płci
+  3. Zastosować wartości z elementów DOM
+     - Gdy checkbox zostanie zaznaczony
+    jego tło ma zmienić kolor odpowiedni dla wybranego pola:
+        - Mężczyzna == ``steelblue``
+
+        - Kobieta == ``hotpink``
+
+        - Inne == ``indigo``
+
+     a następnie przycisk "Zapisz mnie!" zostanie zmieniony na dostępny.
+  
+     w przeciwnym wypadku ma pozostać czarny, a tekst zmienić kolor na ``indianred``
+
+  4. Zintegrowanie wartości do funkcji wysyłającej newsletter.
