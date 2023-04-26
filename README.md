@@ -268,7 +268,7 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
     Palindrom to wyrażenie, słowo lub ciąg znaków, który brzmi tak samo czytany od lewej do prawej oraz od prawej do lewej. Przykładem prostego palindromu jest słowo "kajak", które czytane od lewej do prawej i od prawej do lewej brzmi tak samo. Inne przykłady palindromów to: "radar", "Kobyła ma mały bok", "A man, a plan, a canal, Panama!".
     </details>
 
-5. Napisz program, który wyświetli wszystkie liczby pierwsze z zakresu od 1 do 100.
+5.⭐ Napisz program, który wyświetli wszystkie liczby pierwsze z zakresu od 1 do 100.
 
 6. Napisz funkcję, która przyjmie dwa argumenty: ciąg znaków i liczbę, a następnie zwróci taki sam ciąg znaków, ale każdy jego znak powtórzony tyle razy, ile wynosi drugi argument funkcji.
 
