@@ -287,6 +287,10 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
 14. Napisz funkcję, która przyjmie tablicę liczb i zwróci ich średnią arytmetyczną.
 
 15. Napisz program, który wyświetli tabliczkę mnożenia dla liczb od 1 do 10.
+16. Napisz program wyświetlający "menu" z trzema dowolnymi opcjami, po wybraniu których:
+    - Zostanie wyliczona silnia podanej cyfry
+    - Spoteguje podstawę potęgi do danego wykładnika potęgi
+    - Zwróci napis ``PHP jest cool :-f`` litera po literze
 
 16. Wyświetl liczbę ``𝜋``.
 
