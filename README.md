@@ -512,6 +512,8 @@ Do wykonania zadań potrzebna będzie przygotowana baza danych z konkretną tabe
 <summary>Baza danych do zadania</summary>
 
 ```sql
+CREATE DATABASE IF NOT EXISTS php_przyklad;
+USE php_przyklad;
     
 CREATE TABLE uzytkownicy (
   id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -551,7 +553,7 @@ VALUES
   ('Klawiatura mechaniczna Corsair', 'Klawiatura z podświetleniem RGB i wygodnymi przyciskami makro', 499.00, 1, 'Akcesoria komputerowe'),
   ('Gra komputerowa Assassin\'s Creed', 'Gra akcji osadzona w czasach średniowiecza', 179.99, 1, 'Gry komputerowe');
     
-INSERT INTO users (nazwa, email, haslo)
+INSERT INTO uzytkownicy (nazwa, email, haslo)
 VALUES ('john_doe', 'john_doe@example.com', 'password1'),
     ('jane_smith', 'jane_smith@example.com', 'password2'),
     ('bob_johnson', 'bob_johnson@example.com', 'password3');
