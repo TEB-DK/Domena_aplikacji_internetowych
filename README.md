@@ -268,7 +268,7 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
     Palindrom to wyrażenie, słowo lub ciąg znaków, który brzmi tak samo czytany od lewej do prawej oraz od prawej do lewej. Przykładem prostego palindromu jest słowo "kajak", które czytane od lewej do prawej i od prawej do lewej brzmi tak samo. Inne przykłady palindromów to: "radar", "Kobyła ma mały bok", "A man, a plan, a canal, Panama!".
     </details>
 
-5.⭐ Napisz program, który wyświetli wszystkie liczby pierwsze z zakresu od 1 do 100.
+5. Napisz program, który wyświetli wszystkie liczby pierwsze z zakresu od 1 do 100.
 
 6. Napisz funkcję, która przyjmie dwa argumenty: ciąg znaków i liczbę, a następnie zwróci taki sam ciąg znaków, ale każdy jego znak powtórzony tyle razy, ile wynosi drugi argument funkcji.
 
@@ -287,11 +287,241 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
 14. Napisz funkcję, która przyjmie tablicę liczb i zwróci ich średnią arytmetyczną.
 
 15. Napisz program, który wyświetli tabliczkę mnożenia dla liczb od 1 do 10.
-16. Napisz program wyświetlający "menu" z trzema dowolnymi opcjami, po wybraniu których:
-    - Zostanie wyliczona silnia podanej cyfry
-    - Spoteguje podstawę potęgi do danego wykładnika potęgi
-    - Zwróci napis ``PHP jest cool :-f`` litera po literze
 
 16. Wyświetl liczbę ``𝜋``.
 
-![tbc](https://user-images.githubusercontent.com/125214141/234108053-73df8e5e-75cd-456d-b321-59ed9fa7eed2.png)
+## Obsługa bazy danych w PHP
+> Do obsługi bazy danych możemy wykorzystać bibliotekę MySQLi
+
+### MySQLi
+MySQLi to biblioteka PHP służąca do obsługi baz danych MySQL. Została wprowadzona w PHP 5.0 jako alternatywa dla biblioteki MySQL, aby umożliwić programistom korzystanie z nowszych funkcjonalności MySQL, takich jak przygotowywanie zapytań czy transakcje.
+
+MySQLi udostępnia wiele funkcji i metod, które ułatwiają obsługę baz danych MySQL, takie jak:
+
+- ``mysqli_connect()`` - funkcja służąca do nawiązania połączenia z bazą danych
+- ``mysqli_query()`` - funkcja służąca do wykonania zapytania SQL na bazie danych
+- ``mysqli_fetch_assoc()`` - funkcja służąca do pobierania wyników zapytania w formie asocjacyjnej tablicy
+- ``mysqli_prepare()`` - funkcja służąca do przygotowywania zapytań SQL z parametrami
+- ``mysqli_stmt_bind_param()`` - funkcja służąca do przypisywania wartości do przygotowanych zapytań SQL
+- ``mysqli_real_escape_string()`` - funkcja służąca do zabezpieczania wartości przed atakami typu SQL Injection
+
+#### Łączenie się z bazą danych
+Aby połączyć się z bazą danych MySQL przy użyciu MySQLi należy zdefiniować skrypt
+
+```php
+// DANE DO POŁĄCZENIA Z BAZĄ DANYCH
+$servername = "localhost";
+$username = "nazwa_użytkownika";
+$password = "hasło";
+$dbname = "nazwa_bazy_danych";
+
+// TWORZENIE POŁĄCZENIA
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// SPRAWDZANIE CZY POŁĄCZENIE ZOSTAŁO UTWORZONE
+if (!$conn) {
+    die("Nieudane połączenie: " . mysqli_connect_error());
+}
+echo "Połączenie udane!";
+```
+
+Funkcja ``mysqli_connect()`` przyjmuje cztery parametry: ``nazwę hosta``, ``nazwę użytkownika``, ``hasło`` i ``nazwę bazy danych``. Jeśli połączenie zostanie nawiązane pomyślnie, funkcja zwróci ``obiekt połączenia``, który można wykorzystać w dalszej pracy.
+
+#### Zapytania do bazy danych
+
+Wykonanie zapytań jest możliwe za pomocą funkcji ``mysqli_query()``.
+
+```php
+// PRZYKŁADOWE ZAPYTANIE
+$sql = "SELECT * FROM users";
+
+// WYKONANIE ZAPYTANIA
+$result = mysqli_query($conn, $sql);
+
+// SPRAWDZANIE CZY ZAPYTANIE ZWRÓCIŁO WYNIKI
+if (mysqli_num_rows($result) > 0) {
+// Pobranie wyników i wyświetlenie ich na stronie
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "Id: " . $row["id"] . " - Imię: " . $row["firstname"] . " - Nazwisko: " . $row["lastname"] . "<br>";
+    }
+} else {
+    echo "Brak wyników";
+}
+
+// ZWOLNIENIE ZASOBÓW
+mysqli_free_result($result);
+
+```
+
+#### Zapytania parametryzowane do bazy danych
+
+Przygotowanie zapytania w MySQL polega na zastępywaniu wartości parametrów znakiem zapytania "?".
+
+```php
+$sql = "SELECT * FROM users WHERE id = ? AND lastname = ?";
+```
+
+Aby przygotować zmienną typu ``statement``, używając funkcji ``mysqli_prepare()``, która przyjmuje dwa parametry: ``obiekt połączenia`` i ``zapytanie SQL``.
+
+```php
+$stmt = mysqli_prepare($conn, $sql);
+```
+
+Następnie należy przypisać wartości parametrów do zmiennej typu ``statement``, używając funkcji ``mysqli_stmt_bind_param()``, która przyjmuje jako pierwszy parametr zmienną typu ``statement``, a następnie ``listę wartości parametrów``. W przypadku zapytania SQL z dwoma parametrami typu integer, należy użyć typu ``i``.
+
+```php
+$id = 1;
+$lastname = "Kowalski";
+mysqli_stmt_bind_param($stmt, "is", $id, $lastname);
+```
+
+Aby wykonać zapytanie, należy użyć funkcji ``mysqli_stmt_execute()``, która przyjmuje jako parametr zmienną typu ``statement``.
+
+```php
+mysqli_stmt_execute($stmt);
+```
+
+Ostatecznie pobranie wyników zapytania, dokonuje się używając funkcji ``mysqli_stmt_get_result()``, która przyjmuje jako parametr zmienną typu ``statement``.
+
+```php
+$result = mysqli_stmt_get_result($stmt);
+```
+
+Przetworzenie wyniku zapytania, używając funkcji ``mysqli_fetch_assoc()`` lub ``mysqli_fetch_array()``.
+Pierwsza funkcja zwróci tablice asocjacyjną, druga zwykłą.
+
+```php
+while($row = mysqli_fetch_assoc($result)) {
+    echo "Id: " . $row["id"] . " - Imię: " . $row["firstname"] . " - Nazwisko: " . $row["lastname"] . "<br>";
+}
+```
+
+Należałoby również zwolnić zasoby, używając funkcji ``mysqli_free_result()`` i ``mysqli_stmt_close()``.
+
+```php
+mysqli_free_result($result);
+mysqli_stmt_close($stmt);
+```
+
+Całość powinna wyglądać mniej wiecej tak:
+
+```php
+$sql = "SELECT firstname, lastname FROM users WHERE id = ?";
+$stmt = mysqli_prepare($conn, $sql);
+$id = 1;
+mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_bind_result($stmt, $firstname, $lastname);
+mysqli_stmt_fetch($stmt);
+echo "Imię: " . $firstname . " - Nazwisko: " . $lastname . "<br>";
+mysqli_stmt_close($stmt);
+```
+
+W pierwszej funkcji, czyli ``mysqli_stmt_bind_param()``, przekazujemy do funkcji argumenty w kolejności, w jakiej są użyte w zapytaniu SQL. Następnie musimy określić ich typy, które zależą od typów wartości w bazie danych oraz od typów PHP. Na końcu przypisujemy do tych argumentów wartości.
+
+Kolejna funkcja, ``mysqli_stmt_execute()``, wywołuje zapytanie SQL z użyciem przypisanych wartości z poprzedniej funkcji.
+
+Funkcja ``mysqli_fetch_assoc()`` pobiera kolejne wiersze z wyniku zapytania i zwraca je jako asocjacyjną tablicę, gdzie kluczami są nazwy kolumn, a wartościami wartości wierszy.
+
+Funkcja ``mysqli_stmt_bind_result()`` pozwala na przypisanie wyniku zapytania SQL do zmiennych. Przy użyciu tej funkcji możemy pobrać wyniki zapytania w formie zmiennych, co umożliwia łatwiejszą dalszą obróbkę wyników.
+
+#### Kontrolowanie wyników zapytań do bazy danych
+
+Funkcja ``mysqli_affected_rows()`` zwraca liczbę wierszy dotkniętych ostatnim zapytaniem SQL. Jest to przydatne, gdy chcemy np. sprawdzić, ile rekordów zostało zmienionych w wyniku zapytania ``UPDATE`` lub ``DELETE``.
+
+```php
+$sql = "UPDATE users SET lastname = 'Nowak' WHERE firstname = 'Jan'";
+mysqli_query($conn, $sql);
+$num_rows = mysqli_affected_rows($conn);
+echo "Zaktualizowano " . $num_rows . " wierszy.";
+```
+
+Funkcja ``mysqli_num_rows()`` zwraca liczbę wierszy w wyniku zapytania ``SELECT``. Dzięki temu możemy łatwo sprawdzić, ile rekordów zostało zwróconych przez zapytanie.
+
+```php
+$sql = "SELECT * FROM users";
+$result = mysqli_query($conn, $sql);
+$num_rows = mysqli_num_rows($result);
+echo "Liczba użytkowników: " . $num_rows;
+mysqli_free_result($result);
+```
+
+Funkcja ``mysqli_insert_id()`` zwraca ID ostatnio dodanego rekordu. Ta funkcja jest przydatna, gdy dodajemy rekordy do tabeli z autoinkrementowanym kluczem głównym i chcemy później odwołać się do ID dodanego rekordu.
+
+```php
+$sql = "INSERT INTO users (firstname, lastname) VALUES ('Jan', 'Kowalski')";
+mysqli_query($conn, $sql);
+$id = mysqli_insert_id($conn);
+echo "Dodano użytkownika o ID: " . $id;
+```
+
+Funkcja ``mysqli_error()`` zwraca ostatni błąd związany z połączeniem z bazą danych. Jest to przydatne, gdy chcemy szybko sprawdzić, dlaczego zapytanie nie zostało wykonane poprawnie.
+
+```php
+$sql = "SELECT * FROM non_existent_table";
+$result = mysqli_query($conn, $sql);
+if(!$result) {
+    echo "Błąd: " . mysqli_error($conn);
+}
+```
+
+Funkcje z biblioteki MySQLi pozwalają na wykonywanie zapytań SQL do bazy danych oraz na efektywne zarządzanie połączeniem z bazą danych. Aby korzystać z tych funkcji, należy najpierw nawiązać połączenie z bazą danych za pomocą funkcji mysqli_connect() lub mysqli_init(). Następnie można wykonywać zapytania SQL, korzystając z funkcji takich jak mysqli_query(), mysqli_prepare(), mysqli_stmt_execute() oraz mysqli_fetch_assoc(). Ważne jest również pamiętanie o poprawnym sanitizingu wartości parametrów oraz o zabezpieczeniu przed atakami typu SQL injection poprzez użycie prepared statements.
+
+#### Obsługa formularzy
+
+W PHP, obsługa formularzy HTML odbywa się poprzez użycie dwóch superglobalnych zmiennych: ``$_GET`` i ``$_POST``. Oba są tablicami asocjacyjnymi, które przechowują dane wysłane z formularza.
+
+``$_GET`` przechowuje dane wysłane z formularza metodą GET, czyli dane są dołączone do adresu URL, natomiast ``$_POST`` przechowuje dane wysłane metodą POST, czyli dane są przesyłane w tle bez ich widoczności w adresie URL.
+
+Aby przesłać dane z formularza, należy użyć tagu ``<form>`` w HTML. Najważniejsze atrybuty tego tagu to action i method. Atrybut action określa, jaki skrypt PHP powinien odbierać dane z formularza, a atrybut method określa, jakimi metodami dane mają być przesłane.
+
+```html
+<form action="dane.php" method="POST">
+  <label for="imie">Imię:</label>
+  <input type="text" name="imie" id="imie">
+
+  <label for="nazwisko">Nazwisko:</label>
+  <input type="text" name="nazwisko" id="nazwisko">
+
+  <input type="submit" value="Wyślij">
+</form>
+```
+
+W powyższym przykładzie, formularz wysyła dane do skryptu ``dane.php`` metodą POST. Formularz zawiera dwa pola tekstowe: ``imie`` i ``nazwisko``. Po kliknięciu przycisku ``Wyślij``, dane z formularza zostaną przesłane do skryptu PHP.
+
+Aby odczytać dane przesłane z formularza w skrypcie PHP, należy użyć zmiennej $_POST. Wartość każdego pola formularza jest przechowywana jako element tablicy $_POST, którego kluczem jest nazwa pola. Na przykład, aby odczytać wartość pola "imie".
+
+```php
+$imie = $_POST['imie'];
+```
+
+Następnie, dane z formularza można przetworzyć, np. zapisać do bazy danych lub wyświetlić w odpowiedzi dla użytkownika.
+
+```php
+if(isset($_POST['imie']) && isset($_POST['nazwisko'])) {
+    $imie = $_POST['imie'];
+    $nazwisko = $_POST['nazwisko'];
+    echo "Witaj, $imie $nazwisko!";
+}
+```
+
+### 🌟 Zadania do wykonania
+Do wykonania zadań potrzebna będzie przygotowana baza danych z konkretną tabelą przygotowaną poniżej:
+
+<details>
+<summary>Baza danych do zadania</summary>
+
+</details>
+
+
+1. Wyświetl wszystkich użytkowników z tabeli "users".
+
+1. Wyświetl użytkownika o określonym identyfikatorze.
+
+1. Dodaj nowego użytkownika do tabeli "users".
+
+1. Aktualizuj nazwę użytkownika dla określonego identyfikatora.
+
+1. Utwórz skrypt PHP do dodawania nowych użytkowników do bazy danych MySQL.
+
+1. Utwórz skrypt PHP do wyświetlania produktów z bazy danych MySQL.
