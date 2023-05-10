@@ -293,7 +293,7 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
 ## Obsługa bazy danych w PHP
 > Do obsługi bazy danych możemy wykorzystać bibliotekę MySQLi
 
-### MySQLi
+### 📑 MySQLi
 MySQLi to biblioteka PHP służąca do obsługi baz danych MySQL. Została wprowadzona w PHP 5.0 jako alternatywa dla biblioteki MySQL, aby umożliwić programistom korzystanie z nowszych funkcjonalności MySQL, takich jak przygotowywanie zapytań czy transakcje.
 
 MySQLi udostępnia wiele funkcji i metod, które ułatwiają obsługę baz danych MySQL, takie jak:
@@ -305,7 +305,7 @@ MySQLi udostępnia wiele funkcji i metod, które ułatwiają obsługę baz danyc
 - ``mysqli_stmt_bind_param()`` - funkcja służąca do przypisywania wartości do przygotowanych zapytań SQL
 - ``mysqli_real_escape_string()`` - funkcja służąca do zabezpieczania wartości przed atakami typu SQL Injection
 
-#### Łączenie się z bazą danych
+#### 🔗 Łączenie się z bazą danych
 Aby połączyć się z bazą danych MySQL przy użyciu MySQLi należy zdefiniować skrypt
 
 ```php
@@ -327,7 +327,7 @@ echo "Połączenie udane!";
 
 Funkcja ``mysqli_connect()`` przyjmuje cztery parametry: ``nazwę hosta``, ``nazwę użytkownika``, ``hasło`` i ``nazwę bazy danych``. Jeśli połączenie zostanie nawiązane pomyślnie, funkcja zwróci ``obiekt połączenia``, który można wykorzystać w dalszej pracy.
 
-#### Zapytania do bazy danych
+#### ❔ Zapytania do bazy danych
 
 Wykonanie zapytań jest możliwe za pomocą funkcji ``mysqli_query()``.
 
@@ -353,7 +353,7 @@ mysqli_free_result($result);
 
 ```
 
-#### Zapytania parametryzowane do bazy danych
+#### ❔🔒Zapytania parametryzowane do bazy danych
 
 Przygotowanie zapytania w MySQL polega na zastępywaniu wartości parametrów znakiem zapytania "?".
 
@@ -425,7 +425,7 @@ Funkcja ``mysqli_fetch_assoc()`` pobiera kolejne wiersze z wyniku zapytania i zw
 
 Funkcja ``mysqli_stmt_bind_result()`` pozwala na przypisanie wyniku zapytania SQL do zmiennych. Przy użyciu tej funkcji możemy pobrać wyniki zapytania w formie zmiennych, co umożliwia łatwiejszą dalszą obróbkę wyników.
 
-#### Kontrolowanie wyników zapytań do bazy danych
+#### 👨‍✈️Kontrolowanie wyników zapytań do bazy danych
 
 Funkcja ``mysqli_affected_rows()`` zwraca liczbę wierszy dotkniętych ostatnim zapytaniem SQL. Jest to przydatne, gdy chcemy np. sprawdzić, ile rekordów zostało zmienionych w wyniku zapytania ``UPDATE`` lub ``DELETE``.
 
@@ -467,7 +467,7 @@ if(!$result) {
 
 Funkcje z biblioteki MySQLi pozwalają na wykonywanie zapytań SQL do bazy danych oraz na efektywne zarządzanie połączeniem z bazą danych. Aby korzystać z tych funkcji, należy najpierw nawiązać połączenie z bazą danych za pomocą funkcji mysqli_connect() lub mysqli_init(). Następnie można wykonywać zapytania SQL, korzystając z funkcji takich jak mysqli_query(), mysqli_prepare(), mysqli_stmt_execute() oraz mysqli_fetch_assoc(). Ważne jest również pamiętanie o poprawnym sanitizingu wartości parametrów oraz o zabezpieczeniu przed atakami typu SQL injection poprzez użycie prepared statements.
 
-#### Obsługa formularzy
+#### 📄 Obsługa formularzy
 
 W PHP, obsługa formularzy HTML odbywa się poprzez użycie dwóch superglobalnych zmiennych: ``$_GET`` i ``$_POST``. Oba są tablicami asocjacyjnymi, które przechowują dane wysłane z formularza.
 
@@ -510,6 +510,55 @@ Do wykonania zadań potrzebna będzie przygotowana baza danych z konkretną tabe
 
 <details>
 <summary>Baza danych do zadania</summary>
+
+```sql
+    
+CREATE TABLE uzytkownicy (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nazwa VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  haslo VARCHAR(255) NOT NULL,
+  utworzone TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  zaktualizowane TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+CREATE TABLE produkty (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nazwa VARCHAR(100) NOT NULL,
+  opis TEXT,
+  cena DECIMAL(10,2) NOT NULL,
+  dostępność TINYINT(1) DEFAULT 0,
+  kategoria VARCHAR(50)
+);
+
+CREATE TABLE koszyk (
+    id_koszyka INT AUTO_INCREMENT PRIMARY KEY,
+    id_uzytkownika INT NOT NULL,
+    id_produktu INT NOT NULL,
+    FOREIGN KEY (id_uzytkownika) REFERENCES uzytkownicy(id),
+    FOREIGN KEY (id_produktu) REFERENCES produkty(id)
+);
+
+INSERT INTO produkty (nazwa, opis, cena, dostępność, kategoria)
+VALUES
+  ('Komputer stacjonarny', 'Bardzo szybki komputer z procesorem Intel Core i7', 3999.99, 1, 'Komputery'),
+  ('Laptop Dell', 'Laptop z procesorem Intel Core i5 i dyskiem SSD', 2599.99, 1, 'Laptopy'),
+  ('Telewizor Samsung', 'Telewizor o przekątnej 55 cali i rozdzielczości 4K', 3499.00, 1, 'Telewizory'),
+  ('Konsola Xbox', 'Konsola do gier z dyskiem twardym o pojemności 1 TB', 1999.99, 1, 'Konsole do gier'),
+  ('Smartfon Samsung Galaxy', 'Smartfon z ekranem 6,2 cala i podwójnym aparatem fotograficznym', 1599.00, 1, 'Smartfony'),
+  ('Słuchawki bezprzewodowe Sony', 'Słuchawki z funkcją redukcji szumów i długoletnim czasem pracy na baterii', 699.00, 1, 'Słuchawki'),
+  ('Zestaw głośnikowy Logitech', 'Zestaw głośnikowy 2.1 z mocą 120 W i pilotem zdalnego sterowania', 399.00, 1, 'Głośniki'),
+  ('Myszka bezprzewodowa Microsoft', 'Myszka z technologią BlueTrack i ergonomicznym kształtem', 99.00, 1, 'Akcesoria komputerowe'),
+  ('Klawiatura mechaniczna Corsair', 'Klawiatura z podświetleniem RGB i wygodnymi przyciskami makro', 499.00, 1, 'Akcesoria komputerowe'),
+  ('Gra komputerowa Assassin\'s Creed', 'Gra akcji osadzona w czasach średniowiecza', 179.99, 1, 'Gry komputerowe');
+    
+INSERT INTO users (nazwa, email, haslo)
+VALUES ('john_doe', 'john_doe@example.com', 'password1'),
+    ('jane_smith', 'jane_smith@example.com', 'password2'),
+    ('bob_johnson', 'bob_johnson@example.com', 'password3');
+    
+INSERT INTO koszyk (id_uzytkownika, id_produktu) VALUES (1, 2),(3,5),(1,10);
+
+```
 
 </details>
 
