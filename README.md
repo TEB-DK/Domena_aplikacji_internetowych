@@ -1,6 +1,6 @@
 <div align='center'>
 
-# Domena aplikacji internetowych
+#  🌐 Wprowadzenie do aplikacji internetowych 🌐
 
 </div>
 
