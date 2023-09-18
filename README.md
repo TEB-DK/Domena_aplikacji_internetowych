@@ -95,8 +95,35 @@ Znaczniki niesemantyczne w HTML to elementy, które nie niosą znaczenia semanty
 
 > Chociaż znaczniki niesemantyczne nie przekazują znaczenia strukturalnego ani semantycznego, są one nadal ważne w projektowaniu stron internetowych, ponieważ pozwalają na dostosowanie wyglądu i układu treści. Jednak zawsze warto dążyć do używania znaczników semantycznych tam, gdzie to możliwe, aby strony były bardziej zrozumiałe dla przeglądarek internetowych i wyszukiwarek oraz bardziej dostępne dla użytkowników.
 
+### 🌟 Zadanie do wykonania
+Twoim celem jest stworzenie bardzo *zaawansowanej* strony internetowej, która wykorzystuje znaczniki niesemantyczne, formularz i skomplikowane style.
+
+   1. Utwórz plik HTML o nazwie "index.html".
+   
+   2. Wykorzystaj co najmniej pięć różnych znaczników niesemantycznych, aby stworzyć układ strony.
+   
+   3. Dodaj formularz do strony. Formularz ten powinien zawierać następujące podstawowe elementy:
+      - Pole tekstowe.
+      - Pole wyboru.
+      - Pole wprowadzenia daty.
+      - Przycisk do wysłania formularza.
+   
+   4. Wykorzystaj atrybuty formularza, takie jak `name`, `id`, `value`, aby dostosować każdy z elementów formularza.
+   
+   5. Dodaj odpowiednie etykiety (znaczniki `<label>`) do każdego pola formularza.
+      
+      <details>
+         <summary> => Etykietowanie pól formularza <= </summary>
+      
+      ```html
+      <label for="pole">Podaj login:</label>
+      <input type="text" id="pole"> 
+      ```
+      > W tej wersji etykieta zamknięta jest przed znacznikiem <input>, ale pojawia się dodatkowo atrybut for (ang. "dla") określający dla jakiego elementu jest to etykieta. Wartością atrybutu for jest               identyfikator, podany także w atrybucie id wewnątrz <input>. Obydwa identyfikatory rzecz jasna koniecznie muszą być identyczne. To właśnie w ten sposób następuje logiczne powiązanie pomiędzy kontrolką formularza i jego etykietą. Co najważniejsze: prawidłowo ustawiona etykieta reaguje na kliknięcie – powiązana z nią kontrolka formularza zyskuje aktywność.   
+      </details>
+
 #### Znaczniki semantyczne
-Znaczniki semantyczne w HTML to elementy, które mają znaczenie semantyczne i opisują strukturę oraz znaczenie zawartości strony internetowej. Korzystając z tych znaczników, można jasno określić, jakie są różne sekcje i elementy na stronie, co pomaga przeglądarkom internetowym i wyszukiwarkom w zrozumieniu treści oraz dostarcza lepszych informacji dla użytkowników, w szczególności dla tych z niepełnosprawnościami. Znaczniki semantyczne pomagają również w tworzeniu bardziej dostępnych i bardziej czytelnych stron internetowych. Oto kilka znaczników semantycznych i ich zastosowań:
+Znaczniki semantyczne w HTML to elementy, które mają znaczenie semantyczne i opisują strukturę oraz znaczenie zawartości strony internetowej. Korzystając z tych znaczników, można jasno określić, jakie są różne sekcje i elementy na stronie, co pomaga przeglądarkom internetowym i wyszukiwarkom w zrozumieniu treści oraz dostarcza lepszych informacji dla użytkowników, w szczególności dla tych z niepełnosprawnościami. Znaczniki semantyczne pomagają również w tworzeniu bardziej dostępnych i bardziej czytelnych stron internetowych.
 
 1. **Znacznik `<header>`:** Ten znacznik jest używany do określenia nagłówka strony lub sekcji. Może zawierać elementy takie jak logo, nazwa strony i menu nawigacyjne.
 
@@ -212,7 +239,7 @@ Znaczniki semantyczne w HTML to elementy, które mają znaczenie semantyczne i o
 
 ### Atrybuty
 
-Atrybuty w znacznikach HTML to dodatkowe informacje lub właściwości, które można przypisać elementom na stronie internetowej. Atrybuty pomagają dostosować zachowanie i wygląd elementów oraz dostarczyć dodatkowych danych, które są niezbędne dla niektórych znaczników. Oto kilka przykładów atrybutów i jak z nich korzystać:
+Atrybuty w znacznikach HTML to dodatkowe informacje lub właściwości, które można przypisać elementom na stronie internetowej. Atrybuty pomagają dostosować zachowanie i wygląd elementów oraz dostarczyć dodatkowych danych, które są niezbędne dla niektórych znaczników.
 
 - **Atrybut `href` (Hyperlink Reference):** Ten atrybut jest używany w znaczniku `<a>` do określenia docelowego adresu URL linku. Przykład:
 
@@ -258,9 +285,143 @@ Atrybuty w znacznikach HTML to dodatkowe informacje lub właściwości, które m
 
 Te to tylko niektóre z wielu atrybutów dostępnych w znacznikach HTML. Atrybuty pozwalają na dostosowanie i wzbogacenie treści strony oraz wpływają na jej zachowanie i styl. Ważne jest, aby stosować atrybuty zgodnie z ich przeznaczeniem i zrozumieć, jak wpływają na strukturę i działanie strony internetowej.
 
+### Formularze
+
+Formularze w HTML to ważny element tworzenia interaktywnych i dynamicznych stron internetowych. Pozwalają one użytkownikom wprowadzać dane, które można przesłać na serwer do dalszego przetwarzania lub wykorzystać do innych celów. Formularze są używane do różnych celów, takich jak logowanie, rejestracja, przesyłanie komentarzy, zamawianie produktów i wiele innych.
+
+#### Podstawowe elementy formularza
+
+- **form**: Znacznik `<form>` służy do definiowania formularza i otacza całą zawartość formularza. Atrybuty `action` i `method` są używane do określenia, gdzie i w jaki sposób dane z formularza zostaną przesłane na serwer.
+
+   ```html
+   <form action="przetwarzanie_formularza.php" method="POST">
+       <!-- Elementy formularza zostaną umieszczone tutaj -->
+   </form>
+   ```
+
+- **input**: Znacznik `<input>` służy do tworzenia różnych rodzajów pól formularza, takich jak pola tekstowe, przyciski, pola wyboru itp. Atrybuty `type` określają rodzaj pola.
+
+   ```html
+   <input type="text" name="username">
+   <input type="password" name="password">
+   <input type="submit" value="Zaloguj się">
+   ```
+
+- **textarea**: Znacznik `<textarea>` służy do tworzenia wieloliniowych pól tekstowych, które pozwalają użytkownikom wprowadzać dłuższe teksty.
+
+   ```html
+   <textarea name="message" rows="4" cols="50"></textarea>
+   ```
+
+- **select/option**: Znacznik `<select>` tworzy rozwijaną listę wyboru, a znaczniki `<option>` definiują dostępne opcje w tej liście.
+
+   ```html
+   <select name="country">
+       <option value="us">Stany Zjednoczone</option>
+       <option value="ca">Kanada</option>
+       <option value="uk">Wielka Brytania</option>
+   </select>
+   ```
+
+- **button**: Znacznik `<button>` tworzy przycisk, który może być używany do zatwierdzania formularza lub wykonywania innych działań w skrypcie JavaScript.
+
+   ```html
+   <button type="submit">Zapisz</button>
+   ```
+
+- **label**: Znacznik `<label>` służy do opisywania pól formularza. Pomaga to użytkownikom zrozumieć, do czego dane pole służy. Atrybut `for` łączy etykietę z odpowiednim polem za pomocą atrybutu `id`.
+
+   ```html
+   <label for="username">Nazwa użytkownika:</label>
+   <input type="text" id="username" name="username">
+   ```
+
+#### Atrybuty formularza
+
+- **action**: Określa, gdzie zostaną przesłane dane formularza po jego zatwierdzeniu. Może to być adres URL lub nazwa pliku skryptu na serwerze.
+
+- **method**: Określa metodę przesyłania danych formularza. Najczęściej używane metody to "GET" (dane przesyłane w adresie URL) i "POST" (dane przesyłane w ciele żądania HTTP).
+
+- **name**: Nazwa pola formularza, która jest używana do identyfikowania danych po przesłaniu formularza.
+
+- **id**: Unikalny identyfikator pola formularza, który może być używany do połączenia etykiety z polem.
+
+- **type**: Określa rodzaj pola formularza, np. "text", "password", "email", "checkbox", "radio", "submit", itp.
+
+- **value**: Domyślna wartość pola, która jest wyświetlana w polu formularza.
+
+- **required**: Atrybut, który wymusza, aby pole było wypełnione przed zatwierdzeniem formularza. (HTML5)
+
+- **disabled**: Atrybut, który wyłącza pole formularza, uniemożliwiając jego edycję przez użytkownika.
+
+#### Pseudo-Klasy CSS dla formularzy
+
+Pseudo-klasy CSS, takie jak `:hover`, `:focus`, `:active`, pozwalają na dostosowanie wyglądu elementów formularza w zależności od interakcji użytkownika. Na przykład, `:hover` pozwala na zmianę koloru tła przycisku po najechaniu myszką, a `:focus` pozwala dostosować styl pola formularza, gdy jest w fokusie.
+
+#### Przetwarzanie formularza
+> Po zatwierdzeniu formularza dane są przesyłane na serwer do dalszego przetwarzania. W języku PHP, Python, Ruby lub innym języku programowania można napisać skrypt, który odbierze te dane, przetworzy je i podjąć odpowiednie działania, takie jak zapisanie ich w bazie danych lub wysłanie wiadomości e-mail.
+
+### 🌟 Zadanie do wykonania
+Twoim zadaniem jest stworzenie formularza kontaktowego dla strony internetowej. Formularz ten powinien umożliwiać użytkownikom wprowadzenie swoich danych kontaktowych oraz treści wiadomości. 
+   
+   1. Utwórz plik HTML i nadaj mu odpowiednią strukturę.
+   
+   2. Dodaj znacznik `<form>` wewnątrz pliku HTML. Ustaw atrybuty `action` na cel przetwarzania formularza (może to być adres URL lub skrypt na serwerze) oraz `method` na "POST" lub "GET", w zależności od Twoich potrzeb.
+   
+   3. Wewnątrz formularza dodaj następujące elementy:
+   
+      - Pole tekstowe do wprowadzenia imienia użytkownika.
+      - Pole tekstowe do wprowadzenia adresu e-mail.
+      - Lista rozwijana (`<select>`) z wyborem tematu wiadomości (np. "Pytanie ogólne", "Wsparcie techniczne", "Skargi i sugestie").
+      - Pole tekstowe wielolinijkowe do wprowadzenia treści wiadomości.
+      - Przycisk "Wyślij", który pozwoli na przesłanie formularza.
+   
+   4. Dodaj etykiety (`<label>`) do każdego pola formularza, aby opisać, do czego dane pole służy.
+   
+   5. Zastosuj odpowiednie atrybuty, takie jak `name`, `id` i `required`, aby dostosować formularz do Twoich potrzeb.
+   
+   6. Dostosuj wygląd formularza za pomocą CSS, aby nadać mu atrakcyjny wygląd.
+   
+   7. Dodaj odpowiednią walidację formularza, sprawdzając, czy wymagane pola są wypełnione poprawnie przed przesłaniem formularza.
+   
+   8. Ostatecznie, przetestuj formularz, wprowadzając w nim przykładowe dane i przesyłając go, aby upewnić się, że działa zgodnie z oczekiwaniami.
+   
+   Twoim celem jest stworzenie pełnoprawnego formularza kontaktowego, który pozwoli użytkownikom skontaktować się z właścicielem strony lub firmą.
 
 ## 🖌️ CSS (Cascading Style Sheets)
 Język używany do definiowania wyglądu i stylizacji elementów na stronach internetowych. CSS pozwala projektantom i programistom kontrolować prezentację treści HTML, takie jak kolor, czcionka, marginesy, odstępy między elementami, tło i wiele innych właściwości, aby uzyskać pożądany wygląd strony.
+
+Tabela zawierająca najważniejsze atrybuty CSS:
+
+| Atrybut CSS            | Opis                                                | Przykład                                     |
+|------------------------|-----------------------------------------------------|----------------------------------------------|
+| `color`                | Kolor tekstu                                        | `color: blue;`                              |
+| `font-size`            | Rozmiar czcionki                                    | `font-size: 16px;`                          |
+| `font-family`          | Rodzina czcionek                                    | `font-family: Arial, sans-serif;`           |
+| `font-weight`          | Grubość czcionki (np. bold)                         | `font-weight: bold;`                        |
+| `text-align`           | Wyrównanie tekstu                                   | `text-align: center;`                       |
+| `text-decoration`      | Dekoracja tekstu (np. underline)                   | `text-decoration: underline;`               |
+| `background-color`     | Kolor tła                                           | `background-color: #f0f0f0;`                |
+| `margin`               | Margines                                           | `margin: 10px;`                             |
+| `padding`              | Wypełnienie (odstęp wewnętrzny)                    | `padding: 5px;`                             |
+| `border`               | Ramka wokół elementu                                | `border: 1px solid #000;`                   |
+| `width`                | Szerokość elementu                                  | `width: 200px;`                             |
+| `height`               | Wysokość elementu                                   | `height: 100px;`                            |
+| `display`              | Typ wyświetlania elementu (np. block, inline)      | `display: block;`                           |
+| `position`             | Pozycja elementu (np. relative, absolute)          | `position: relative;`                       |
+| `top`, `right`, `bottom`, `left` | Pozycja względem rodzica (dla `position: absolute`) | `top: 10px;`                                |
+| `float`                | Odbijanie elementu na lewo lub prawo               | `float: left;`                              |
+| `clear`                | Czyszczenie obiektów float                         | `clear: both;`                              |
+| `z-index`              | Warstwa elementu w stosie z-index                  | `z-index: 1;`                                |
+| `overflow`             | Zachowanie elementu przy przekroczeniu rozmiaru   | `overflow: hidden;`                         |
+| `text-transform`       | Transformacja tekstu (np. uppercase)               | `text-transform: uppercase;`                |
+| `line-height`          | Wysokość linii                                      | `line-height: 1.5;`                         |
+| `list-style`           | Styl listy (np. typ i obrazek punktu listy)        | `list-style: square inside;`                |
+| `opacity`              | Przezroczystość elementu                           | `opacity: 0.5;`                             |
+| `box-shadow`           | Cień elementu                                      | `box-shadow: 2px 2px 5px #888888;`          |
+| `transition`           | Efekty przejścia (np. dla animacji)               | `transition: width 1s ease-in-out;`         |
+
+> To tylko kilka podstawowych atrybutów CSS, a język ten jest znacznie bardziej rozbudowany.
 
 ### Podpięcie .css do HTML5
 Jak podpiąć zewnętrzny arkusz stylów CSS do pliku HTML?
@@ -323,6 +484,69 @@ To część reguł CSS, która określa, które elementy na stronie będą podle
       padding: 1em; /* Wypełnienie jako jedna em (elastyczna jednostka) */
   }
   ```
+### Pseudo-klasy
+Pseudo-klasy w CSS to specjalne selektory, które pozwalają na wybieranie elementów HTML na podstawie ich stanu lub położenia względem użytkownika. Pseudo-klasy są poprzedzane dwukropkiem (`:`) i stosuje się je, aby dostosować styl elementów w zależności od różnych warunków.
+
+1. **:hover** - Pseudo-klasa `:hover` służy do stylizacji elementu, gdy użytkownik najedzie na niego kursorem myszy. Jest to często stosowane do tworzenia interaktywnych efektów, takich jak zmiana koloru tła przycisku po najechaniu myszką.
+
+   Przykład:
+   ```css
+   button:hover {
+     background-color: #ff0000;
+   }
+   ```
+
+2. **:active** - Pseudo-klasa `:active` pozwala na dostosowanie stylu elementu, gdy jest on aktywowany, np. wciśnięcie przycisku myszy.
+
+   Przykład:
+   ```css
+   a:active {
+     color: purple;
+   }
+   ```
+
+3. **:focus** - Pseudo-klasa `:focus` pozwala na dostosowanie stylu elementu, gdy jest on w fokusie, na przykład gdy użytkownik ``kliknie`` na pole formularza.
+
+   Przykład:
+   ```css
+   input:focus {
+     border-color: blue;
+   }
+   ```
+
+4. **:nth-child(n)** - Pseudo-klasa `:nth-child(n)` pozwala na wybieranie elementów na podstawie ich pozycji w kontenerze. Możesz używać różnych wartości `n`, aby wybrać konkretne elementy w danym kontenerze.
+
+   Przykład:
+   ```css
+   ul li:nth-child(odd) {
+     background-color: #f0f0f0;
+   }
+   ```
+
+5. **:not(selector)** - Pseudo-klasa `:not(selector)` pozwala na wybieranie elementów, które nie pasują do określonego selektora. To przydatne do wykluczania pewnych elementów z zestawu wybranych elementów.
+
+   Przykład:
+   ```css
+   p:not(.special) {
+     font-style: italic;
+   }
+   ```
+
+6. **:first-child** i **:last-child** - Pseudo-klasy `:first-child` i `:last-child` pozwalają na wybieranie pierwszego i ostatniego elementu w obrębie ich rodzica.
+
+   Przykład:
+   ```css
+   li:first-child {
+     font-weight: bold;
+   }
+   
+   li:last-child {
+     font-style: italic;
+   }
+   ```
+
+> Pseudo-klasy są potężnym narzędziem do dokładnej kontroli stylizacji elementów na stronie internetowej, szczególnie w odpowiedzi na interakcje użytkownika lub strukturę dokumentu.
+
 
 ### Model pudełka
 > Model pudełka to koncepcja określająca, jak przeglądarka renderuje elementy HTML. Składa się z czterech głównych właściwości: margines, obramowanie, wypełnienie i szerokość/wysokość.
@@ -341,3 +565,143 @@ To część reguł CSS, która określa, które elementy na stronie będą podle
 > To tylko krótka prezentacja głównych aspektów CSS. Ten język jest niezwykle wszechstronny i potrafi dostarczyć wiele narzędzi do kreatywnego projektowania stron internetowych. Zrozumienie tych podstaw pozwala na tworzenie bardziej atrakcyjnych, responsywnych i dostępnych witryn internetowych.
 
 </div>
+
+### 🌟 Zadania do wykonania
+
+   - **Zadanie 1: Stylizacja Tekstu**
+     
+      Utwórz stronę HTML zawierającą kilka paragrafów tekstu oraz wykorzystaj atrybuty CSS do ich stylizacji. Zadanie polega na zmianie koloru tekstu, rozmiaru czcionki i dodaniu efektu pogrubienia.
+   
+   - **Zadanie 2: Układ Strony**
+     
+      Na stworzonej stronie dodaj nagłówek stopnia pierwszego, dwa elementy blokowe i stopke. Za pomocą atrybutów CSS dostosuj szerokość i kolor tła każdej sekcji, a także ustal marginesy tak, aby uzyskać równy odstęp między nimi.
+   
+   - **Zadanie 3: Menu Nawigacyjne**
+     
+      Następnie utwórz menu nawigacyjne za pomocą znaczników listy (`<ul>` i `<li>`). Wykorzystaj atrybuty CSS do zmiany koloru tła elementów menu po najechaniu na nie myszką (`:hover`) oraz dodaj efekty przejścia (np. zmiana koloru) w czasie hover.
+   
+   - **Zadanie 4: Zdjęcia i Ramki**
+
+      Dodaj kilka obrazków (`<img>`) na swoją stronę. Za pomocą atrybutów CSS dodaj obramowanie (`border`) wokół każdego obrazka, dostosuj jego szerokość i wycentruj obrazy na stronie.
+   
+   - **Zadanie 5: Buttony Interaktywne**
+     
+      Utwórz przyciski (`<button>`) i użyj atrybutów CSS do nadania im atrakcyjnego wyglądu. Dodaj efekty wizualne, takie jak zmiana koloru lub cienia, po najechaniu myszką na przycisk.
+   
+   - **Zadanie 6: Animacja Tekstu**
+     
+      Stwórz animację tekstu na swojej stronie. Wykorzystaj atrybuty CSS do animowania koloru tekstu, tła lub rozmiaru czcionki. Możesz również dodać efekty przejścia dla płynniejszej animacji.
+   
+   - **Zadanie 7: Nawigacja w Stopce**
+     
+      Dodaj nawigację w stopce strony, zawierającą kilka linków (`<a>`) do różnych stron internetowych. Wykorzystaj atrybuty CSS do stylizacji tych linków, takie jak zmiana koloru po najechaniu myszką lub podkreślenie linków odwiedzonych.
+
+### Viewport
+
+Jednostki `vw` (viewport width) i `vh` (viewport height) są jednostkami względnymi w CSS, które pozwalają na określenie wielkości elementów w odniesieniu do szerokości (`vw`) i wysokości (`vh`) widoku przeglądarki.
+
+1. **vw (viewport width)**:
+
+   - Jednostka `vw` reprezentuje procent szerokości widoku przeglądarki. 1vw to 1% szerokości widoku.
+   - Jest przydatna do tworzenia elementów, które skalują się w zależności od szerokości okna przeglądarki.
+   - Może być stosowana do ustalania szerokości tekstu, marginesów, paddingu i innych elementów w sposób responsywny.
+   - Przykład: Jeśli chcesz, aby element zajmował 50% szerokości widoku przeglądarki, możesz użyć `width: 50vw;`.
+
+2. **vh (viewport height)**:
+
+   - Jednostka `vh` reprezentuje procent wysokości widoku przeglądarki. 1vh to 1% wysokości widoku.
+   - Jest przydatna do tworzenia elementów, które skalują się w zależności od wysokości okna przeglądarki.
+   - Często wykorzystywana w projektowaniu responsywnych układów, takich jak sekcje strony, które powinny zajmować określoną część dostępnej wysokości.
+   - Przykład: Możesz użyć `height: 70vh;`, aby ustawić wysokość elementu na 70% wysokości widoku przeglądarki.
+
+Przykład użycia `vw` i `vh` w praktyce:
+
+```css
+.container {
+  width: 80vw; /* Element zajmie 80% szerokości widoku */
+  height: 60vh; /* Element zajmie 60% wysokości widoku */
+  padding: 2vw; /* Padding będzie skalował się w zależności od szerokości widoku */
+  font-size: 3vh; /* Rozmiar czcionki dostosowany do wysokości widoku */
+}
+```
+
+Jednostki `vw` i `vh` są przydatne w projektowaniu responsywnych stron internetowych, ponieważ pozwalają na elastyczne dostosowywanie elementów do różnych rozmiarów ekranu i urządzeń. Warto jednak używać ich z umiarem i testować wygląd strony na różnych urządzeniach, aby upewnić się, że zachowuje ona odpowiednią czytelność i estetykę.
+
+#### Różnica między `%`, a `vw` / `vh`
+Różnica między % a vw/vh wynika z kontekstu i sposobu, w jaki te jednostki są obliczane:
+
+   - Procenty `%` są obliczane względem wielkości kontenera nadrzędnego. Jeśli element znajduje się wewnątrz innego elementu, to jego rozmiar zależy od wielkości tego nadrzędnego elementu.
+
+   - Jednostki `vw` i `vh` są obliczane względem szerokości (vw) lub wysokości (vh) całego widoku przeglądarki. Niezależnie od struktury DOM, te jednostki zawsze odnoszą się do widoku przeglądarki, co czyni je bardziej odpowiednimi do tworzenia elementów, które mają dostosowywać się do całego widoku, niezależnie od rodzica.
+    
+### Model Flexbox
+
+Flexbox (skrót od "Flexible Box Layout") to technika układania elementów na stronie internetowej w sposób elastyczny i dynamiczny. Jest to jedno z narzędzi w CSS, które ułatwia tworzenie responsywnych układów strony oraz zarządzanie rozmieszczeniem i przestrzenią między elementami. Flexbox jest szczególnie przydatny w projektowaniu układów interfejsów użytkownika.
+
+1. **Kontener Flexbox**: Aby rozpocząć korzystanie z flexbox, tworzymy "kontener flexbox" (często jest to div lub inny element) i nadajemy mu właściwość `display: flex;` w CSS. To sprawia, że wszystkie bezpośrednie dzieci kontenera stają się "elementami flexbox".
+
+   ```css
+   .flex-container {
+     display: flex;
+   }
+   ```
+
+2. **Kierunek układu (flex-direction)**: Kierunek, w jakim elementy flexbox są układane wewnątrz kontenera, jest kontrolowany za pomocą właściwości `flex-direction`. Możliwe wartości to `row` (domyślnie), `row-reverse`, `column` i `column-reverse`.
+
+   ```css
+   .flex-container {
+     flex-direction: row; /* Poziomy układ (domyślny) */
+   }
+   ```
+
+3. **Równomierne rozmieszczenie (justify-content)**: Właściwość `justify-content` kontroluje, w jaki sposób elementy flexbox są rozmieszczane wzdłuż głównego osi kontenera. Możliwe wartości to `flex-start` (domyślnie), `flex-end`, `center`, `space-between` i `space-around`.
+
+   ```css
+   .flex-container {
+     justify-content: center; /* Centrowanie elementów w poziomie */
+   }
+   ```
+
+4. **Równomierne rozłożenie w pionie (align-items)**: Właściwość `align-items` kontroluje, w jaki sposób elementy flexbox są rozmieszczane wzdłuż osi krzyżowej kontenera. Możliwe wartości to `stretch` (domyślnie), `flex-start`, `flex-end`, `center` i `baseline`.
+
+   ```css
+   .flex-container {
+     align-items: center; /* Centrowanie elementów w pionie */
+   }
+   ```
+
+5. **Równomierne rozłożenie w pionie (align-content)**: Właściwość `align-content` kontroluje rozmieszczenie elementów flexbox w kontenerze, jeśli jest dostępna dodatkowa przestrzeń wzdłuż osi krzyżowej. Możliwe wartości to `stretch` (domyślnie), `flex-start`, `flex-end`, `center`, `space-between` i `space-around`.
+
+   ```css
+   .flex-container {
+     align-content: space-between; /* Rozłożenie przestrzeni w pionie */
+   }
+   ```
+
+6. **Elastyczność (flex)**: Każdy element flexbox ma właściwość `flex`, która określa, jak wiele przestrzeni może on zająć w stosunku do innych elementów flexbox. Im większa wartość `flex`, tym więcej miejsca zajmie. Domyślnie wartość `flex` wynosi `0 1 auto`, co oznacza, że element nie będzie się rozciągał i będzie zajmował tylko dostępną przestrzeń.
+
+   ```css
+   .flex-item {
+     flex: 2; /* Element o flex: 2 zajmuje dwukrotnie więcej miejsca niż element o flex: 1 */
+   }
+   ```
+
+7. **Zamiana kolejności (order)**: Właściwość `order` pozwala na zmianę kolejności wyświetlania elementów flexbox. Domyślnie elementy mają wartość `order: 0`, ale można je przestawiać na różne pozycje.
+
+   ```css
+   .flex-item {
+     order: 1; /* Element zostanie przesunięty na koniec listy */
+   }
+   ```
+
+8. **Wielowierszowość (flex-wrap)**: Właściwość `flex-wrap` kontroluje, czy elementy flexbox powinny układać się w jednym wierszu (domyślnie) czy w wielu wierszach, jeśli nie ma wystarczającej szerokości kontenera. Możliwe wartości to `nowrap`, `wrap`, i `wrap-reverse`.
+
+   ```css
+   .flex-container {
+     flex-wrap: wrap; /* Elementy flexbox układają się w wielu wierszach */
+   }
+   ```
+
+### :star2: Zadanie do wykonania 🐸
+###### W celu praktyki flexbox, następnym krokiem będzie przejście 24 poziomów na stronie [Flexbox froggy](https://flexboxfroggy.com/) i umożliwienie żabkom wygodne siedzenie na liściach.
+
