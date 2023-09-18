@@ -40,7 +40,7 @@
 
    - Dla nagłówków tabeli (`<th>`), ustaw tło na ciemnoczerwone i kolor tekstu na biały.
 
-   - W sekcji galerii (`<div class="gallery">`), wyświetl obrazy jako flexbox, umożliw przewijanie w przypadku przekroczenia szerokości.
+   - W sekcji galerii, wyświetl obrazy jako flexbox, umożliw przewijanie w przypadku przekroczenia szerokości.
 
    - Dla obrazów w galerii (`<img>`), ustaw szerokość na 45% lub maksymalnie 45vw, oraz dodaj margines dolny.
 
@@ -48,7 +48,7 @@
 
    - Dla etykiet formularza (`<label>`), wyświetl jako blok i dodaj margines dolny. Zmień kolor tekstu na jasnoszary.
 
-   - Dla pól tekstowych, pola email, rozwijanej listy i pola tekstowego wielolinijkowego (`input[type="text"], input[type="email"], select, textarea`), ustaw szerokość na 100%, dodaj odstęp wewnętrzny i obramowanie.
+   - Dla pól tekstowych, pola email, rozwijanej listy i pola tekstowego wielolinijkowego, ustaw szerokość na 100%, dodaj odstęp wewnętrzny i obramowanie.
 
    - Dla pola tekstowego wielolinijkowego (`<textarea>`), umożliw zmianę rozmiaru pionowego.
 
