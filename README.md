@@ -289,6 +289,107 @@ W tym przykładzie funkcja `dodaj` dodaje dwie liczby i zwraca wynik. Funkcja je
 15. Napisz program, który wyświetli tabliczkę mnożenia dla liczb od 1 do 10.
 
 16. Wyświetl liczbę ``𝜋``.
+17. Kalkulator BMI:
+   - Użytkownik podaje swoją wagę (w kilogramach) i wzrost (w metrach).
+   - Program oblicza BMI według wzoru: BMI = masa ciała (kg) / (wzrost (m) * wzrost (m)).
+   - Program porównuje uzyskane BMI z zakresami wartości, aby określić, czy użytkownik jest niedowagą, nadwagą, czy ma prawidłową wagę.
+   - Przykładowe zakresy wartości BMI:
+     - BMI < 18.5: Niedowaga
+     - 18.5 <= BMI < 24.9: Prawidłowa waga
+     - BMI >= 25: Nadwaga
+
+18. Gra w kamień, papier, nożyce:
+   - Użytkownik wybiera jedną z opcji: kamień, papier lub nożyce.
+   - Program losowo wybiera jedną z tych samych opcji.
+   - Program porównuje wybory użytkownika i komputera, aby określić wynik:
+     - Kamień pokonuje nożyce.
+     - Nożyce tną papier.
+     - Papier owija kamień.
+   - Program ogłasza zwycięzcę lub remis.
+    <details>
+        <summary> Funkcja losująca wynik komputera </summary>
+    
+       ```php
+        function komputerWybiera()
+        {
+            $opcje = ['kamień', 'papier', 'nożyce'];
+            $losowaOpcja = array_rand($opcje);
+            return $opcje[$losowaOpcja];
+        }
+       ```
+   </details>
+
+19. Logowanie z autoryzacją:
+   - Użytkownik podaje nazwę użytkownika i hasło.
+   - Program porównuje podane dane z danymi autoryzacyjnymi przechowywanymi w bazie danych lub pliku.
+   - Jeśli dane są zgodne, użytkownik zostaje zalogowany.
+   - Jeśli dane są nieprawidłowe, program wyświetla komunikat o błędzie i nie udziela dostępu.
+
+20. Kalkulator podatku dochodowego:
+   - Użytkownik podaje swoje roczne dochody.
+   - Program oblicza podatek dochodowy na podstawie określonych stawek podatkowych.
+   - Program może używać różnych progów podatkowych, na przykład:
+     - Dochód do 50 000 zł: 10% podatku
+     - Dochód od 50 001 zł do 100 000 zł: 20% podatku
+     - Dochód powyżej 100 000 zł: 30% podatku
+
+21. Sprawdzanie roku przestępnego:
+   - Użytkownik podaje rok, który chce sprawdzić.
+   - Program sprawdza, czy rok jest przestępny na podstawie określonych reguł:
+     - Rok jest przestępny, jeśli jest podzielny przez 4, ale nie jest podzielny przez 100, chyba że jest podzielny przez 400.
+   - Program informuje użytkownika, czy podany rok jest przestępny czy nie.
+
+22. Wyszukiwanie w tablicy:
+   - Utwórz tablicę z różnymi elementami, np. liczbami całkowitymi lub ciągami znaków.
+   - Napisz program, który pozwoli użytkownikowi wprowadzić poszukiwany element.
+   - Użyj pętli `for` lub `foreach`, aby iterować przez tablicę i sprawdzić, czy poszukiwany element znajduje się w tablicy.
+   - Wyświetl informację, czy element został znaleziony, a jeśli tak, to w którym indeksie tablicy.
+
+23. Mnożenie elementów tablicy:
+   - Utwórz tablicę zawierającą liczby całkowite.
+   - Napisz program, który pobierze liczbę, przez którą każdy element tablicy ma zostać pomnożony.
+   - Użyj pętli `for` lub `foreach`, aby pomnożyć każdy element tablicy przez podaną liczbę.
+   - Wynik zapisz w nowej tablicy.
+
+24. Średnia arytmetyczna z tablicy:
+   - Utwórz tablicę zawierającą liczby.
+   - Napisz pętlę, która iteruje przez tablicę i sumuje wszystkie jej elementy.
+   - Po zakończeniu pętli podziel sumę przez liczbę elementów w tablicy, aby obliczyć średnią arytmetyczną.
+
+25. Filtrowanie i przekształcanie tablicy:
+   - Utwórz tablicę zawierającą różne elementy, np. liczby całkowite i ciągi znaków.
+   - Napisz pętlę, która przefiltruje tablicę, zachowując tylko elementy spełniające określone kryterium (np. tylko liczby parzyste).
+   - Przekształć wynik w nową tablicę, która zawiera tylko wybrane elementy.
+
+26. Tablica asocjacyjna i pętla foreach:
+   - Utwórz tablicę asocjacyjną, gdzie klucze reprezentują nazwy studentów, a wartości to ich oceny.
+   - Napisz pętlę `foreach`, która przejdzie przez tę tablicę i wyświetli nazwy studentów wraz z ich ocenami.
+
+27. Kalkulator podstawowych operacji matematycznych:
+   - Funkcja przyjmuje dwie liczby i operator (+, -, *, /) jako argumenty.
+   - Na podstawie operatora funkcja wykonuje odpowiednią operację matematyczną.
+   - Wynik operacji jest zwracany jako wynik funkcji.
+
+28. Generowanie losowego hasła:
+   - Funkcja przyjmuje długość hasła jako argument.
+   - Generowane hasło powinno zawierać różne rodzaje znaków (litery, cyfry, znaki specjalne).
+   - Wynik funkcji to losowe hasło.
+
+29. Przeliczanie jednostek miar:
+   - Funkcja przyjmuje wartość, jednostkę źródłową i jednostkę docelową jako argumenty.
+   - Wykonuje konwersję jednostek miar na podstawie określonych przeliczników (cm <-> cale, m <-> stopy, kilometry <-> mile, celcjusze <-> fahrenheity).
+   - Wynik funkcji to przeliczona wartość w jednostce docelowej.
+
+30. Tworzenie skrótu sha512 ([hash](https://www.php.net/manual/en/function.hash.php)) z hasła:
+   - Funkcja przyjmuje hasło jako argument.
+   - Generuje skrót (hash) hasła, który może być używany do przechowywania haseł w bezpieczny sposób, zwykle przy użyciu algorytmu, takiego jak bcrypt lub SHA-256.
+   - Wynik funkcji to skrót hasła.
+
+31. Sortowanie tablicy wielowymiarowej:
+   - Funkcja przyjmuje tablicę wielowymiarową i klucz lub kolumnę do sortowania jako argumenty.
+   - Sortuje tablicę wielowymiarową na podstawie wybranego klucza lub kolumny.
+   - Wynik to posortowana tablica.
+
 
 ## Obsługa bazy danych w PHP
 > Do obsługi bazy danych możemy wykorzystać bibliotekę MySQLi
