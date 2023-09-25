@@ -3,6 +3,8 @@
 > <div align="right"><sub>Rysunek 1.1 - Podgląd oczekiwanej strony</sub></div>
 
 ![Strona Budowlana](https://github.com/TEB-DK/Domena_aplikacji_internetowych/assets/125214141/40f7966c-4088-4c6f-a8c8-f28db6dfbcb2)
+🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
+![image](https://github.com/TEB-DK/Domena_aplikacji_internetowych/assets/125214141/cbb2c8d2-bc39-4edd-bb67-d7bae3f87d7c)
 
 
 1. Utwórz plik HTML o nazwie `index.html`.
