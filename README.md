@@ -10,6 +10,54 @@
 
 ## Projekty `zadaniowe`
 
+<details>
+   <summary> 
+      
+   ### 1. **CRUD Panel** / 1 os.
+
+   </summary>
+
+   #### Opis ogólny:
+`CRUD Panel` to aplikacja internetowa umożliwiająca tworzenie, modyfikowanie i usuwanie postów za pomocą prostego panelu widocznego na przykładowym obrazku. Aplikacja polega na nauce operacji bazodanowych i modyfikacji zawartości encji w bazie danych, strona została podzielona na dwie główne części, po jednej stronie widnieje panel z trzema formularzami do dodawania, modyfikacji oraz usuwania wierszy z encji oraz po prawej wizualna reprezentacja zawartości encji.
+
+#### Wizualizacja
+
+   ![CRUD PHP](https://github.com/TEB-DK/Domena_aplikacji_internetowych/assets/125214141/ad22a45c-b2ac-4865-80f4-f7c1c1e01ca5)
+
+#### Technologie:
+- Backend: PHP.
+- Baza danych: MySQL / PostgresSQL / MSSQL.
+- Frontend: HTML (semantyka), CSS, JavaScript (opcjonalnie).
+
+#### Struktura bazy danych (5 encji):
+
+1. **Encja posts**:
+
+    - post_id (klucz główny)
+    - post_title
+    - post_content
+    - created_at
+    - updated_at
+      
+#### Funkcjonalność aplikacji:
+
+1. **Formularz dodajacy post**
+   - Wysyłanie zapytań przez `POST`
+   - Po wysłaniu zapytania dodającego informacje do bazy, następuje doliczenie wartości do zmiennej sesyjnej ( która będzie w dowolnym miejscu wyświetlona ) o ilości dodanych postów.
+   - Sprawdzenie czy na pewno post został dodany do bazy danych
+
+2. **Formularz modyfikujący post**
+   - Wysyłanie zapytań za pomocą `POST`
+   - Po wysłaniu zapytania modyfikującego informacje do bazy, następuje doliczenie wartości do zmiennej sesyjnej ( która będzie w dowolnym miejscu wyświetlona ) o ilości zmodyfikowanych postów.
+   - Sprawdzenie czy na pewno post (tj. zapytanie) został zmodyfikowany w bazie danych.
+
+3. **Formularz usuwajacy post**
+   - Po wysłaniu zapytania usuwającego informacje z bazy, następuje doliczenie wartości do zmiennej sesyjnej ( która będzie w dowolnym miejscu wyświetlona ) o ilości usuniętych postów.
+  
+> Najlepiej aby zmienne sesyjne wyświetlały się gdzieś w obrębie formularza do którego należą.
+     
+</details>
+
 ## Projekty `zaliczeniowe`
 
 ## Projekty `zwolnieniowe`
