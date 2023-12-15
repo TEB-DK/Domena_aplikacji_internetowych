@@ -50,9 +50,12 @@
    - Wysyłanie zapytań za pomocą `POST`
    - Po wysłaniu zapytania modyfikującego informacje do bazy, następuje doliczenie wartości do zmiennej sesyjnej ( która będzie w dowolnym miejscu wyświetlona ) o ilości zmodyfikowanych postów.
    - Sprawdzenie czy na pewno post (tj. zapytanie) został zmodyfikowany w bazie danych.
+   - Modyfikacja odbywa się za pomocą wskazania konkretego tytułu lub po przez wprowadzenie ID posta.
 
 3. **Formularz usuwajacy post**
    - Po wysłaniu zapytania usuwającego informacje z bazy, następuje doliczenie wartości do zmiennej sesyjnej ( która będzie w dowolnym miejscu wyświetlona ) o ilości usuniętych postów.
+   - Usunięcie odbywa się za pomocą wskazania konkretego tytułu lub po przez wprowadzenie ID posta.
+     
   
 > Najlepiej aby zmienne sesyjne wyświetlały się gdzieś w obrębie formularza do którego należą.
      
