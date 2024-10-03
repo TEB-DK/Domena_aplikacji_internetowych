@@ -186,6 +186,8 @@
 
 </details>
 
+---
+
 <details>
    <summary> 
       
@@ -236,6 +238,8 @@
 > Najlepiej aby zmienne sesyjne wyświetlały się gdzieś w obrębie formularza do którego należą.
      
 </details>
+
+---
 
 ## Projekty `zaliczeniowe`
 
