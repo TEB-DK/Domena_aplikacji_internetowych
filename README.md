@@ -191,6 +191,56 @@
 <details>
    <summary> 
       
+   ### 2. **PHP Register** / 1 os.
+
+   </summary>
+
+   #### Opis ogólny:
+`PHP Register` to aplikacja internetowa umożliwiająca użytkownikom rejestracje ich kont, konta te oczekują na akceptacje po stronie panelu zarządzania. Panel zarządzania posiada dodatkowe funkcjonalności takie jak: Dodanie listy zakazanych słów w nazwie użytkownika, Włączenie bezpieczeństwa hasła, Włączenie bezpieczeństwa loginu, Włączenie/Wyłączenie panelu rejestracji. Każda z akcji po włączeniu zwraca "toast" na stronie rejestracji, informując użytkowników o zaistniałej akcji. Prócz tego, gdy rejestracja zostanie wysłana, użytkownik trafia na ekran oczekiwania na którym może spróbować swoich sił w mini-grze odnajdując 3 takie same loga PHP.
+
+#### Wizualizacja
+
+   ![MacBook Pro 14_ - Register](https://github.com/user-attachments/assets/fbb34dd4-d9c2-4bf8-86bf-c8e05afab8e4)
+   ![MacBook Pro 14_ - Control](https://github.com/user-attachments/assets/3409b70f-9e08-4ee8-8703-d4452acae343)
+   ![MacBook Pro 14_ - Thanks](https://github.com/user-attachments/assets/b163aa35-4f14-45d0-9802-dab5e7cb2bd4)
+
+
+#### Technologie:
+- Backend: PHP.
+- Baza danych: MySQL / PostgresSQL / MSSQL.
+- Frontend: HTML (semantyka), CSS / Tailwind, JavaScript.
+
+#### Struktura bazy danych:
+- Baza danych musi składać się z odpowiedniej ilości encji oraz przemyślanego planu funkcjonowania aplikacji.
+      
+#### Funkcjonalność aplikacji:
+
+1. **Formularz rejestracji**
+   - Wysyłanie zapytań przez `POST`
+   - Po wysłaniu zapytania dodającego informacje do bazy, następuje przeniesienie na ekran oczekiwania (ostatni z wizualizacji).
+   - Sprawdzenie czy na pewno post został dodany do bazy danych
+
+2. **Panel zarządzania**
+   - Każdy użytkownik może zostać dodany lub odrzucony (`DELETE` lub `UPDATE` jako zapytanie do bazy danych) z kolejki oczekujących na zatwierdzenie, zapytanie `UPDATE` wyslane metodą `POST`.
+   - Sprawdzenie czy na pewno post (tj. zapytanie) został zmodyfikowany w bazie danych.
+   - Modyfikacja odbywa się za pomocą wskazania konkretego ID przy wyświetleniu użytkownika.
+
+3. **Panel oczekiwania**
+   - Przesłane zostaje imie rejestrującego się użytkownika by móc je wyświetlić w podziękowaniu.
+   - Logika gry musi zostać zaimplementowana w języku JavaScript
+   - Celem gry jest odkrycie 3 identycznych bloczków by odnaleźć logo PHP.
+   - Jeżeli przy 3 odkrytych blokach nie występują bloki z logo PHP, bloczki są zakrywane i przemieszane na nowo.
+   - Gracz posiada za każdym razem tylko jedną szansę trafienia 3 identycznych bloków.
+   - Gdy graczowi uda się odkryć 3 identyczne loga PHP, dostaje prosty alert gratulujący użytkownikowi.
+     
+     
+</details>
+
+---
+
+<details>
+   <summary> 
+      
    ### 2. **CRUD Panel** / 1 os.
 
    </summary>
