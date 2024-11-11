@@ -191,7 +191,7 @@
 <details>
    <summary> 
       
-   ### 2. **PHP Register** / 1 os.
+   ### 2. **PHP Register** / 2 os.
 
    </summary>
 
@@ -231,8 +231,9 @@
    - Celem gry jest odkrycie 3 identycznych bloczków by odnaleźć logo PHP.
    - Jeżeli przy 3 odkrytych blokach nie występują bloki z logo PHP, bloczki są zakrywane i przemieszane na nowo.
    - Gracz posiada za każdym razem tylko jedną szansę trafienia 3 identycznych bloków.
-   - Gdy graczowi uda się odkryć 3 identyczne loga PHP, dostaje prosty alert gratulujący użytkownikowi.
-     
+   - Gdy graczowi uda się odkryć 3 identyczne loga PHP, dostaje prosty alert gratulujący użytkownikowi, gra zostaje zresetowana a licznik wygranych pojawia się w prawym górnym rogu (należy wykorzystać localstorage lub zmienne sesyjne do tego celu).
+
+> Projekt traktowany jest jako dla 2 osób, przy czym podział prac traktuję jako część PHP / część JS. Im wiecej będzie współpracy tym lepiej :-)
      
 </details>
 
@@ -241,7 +242,7 @@
 <details>
    <summary> 
       
-   ### 2. **CRUD Panel** / 1 os.
+   ### 3. **CRUD Panel** / 1 os.
 
    </summary>
 
