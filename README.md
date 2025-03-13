@@ -13,13 +13,306 @@
 <details>
    <summary>
 
-   ### 0. **Biblioteka w Książkowicach Wielkich** / 1 os.
+   ### -1. **CoffiShop** / 1 os.
       
    </summary>
 
-<img src='https://github.com/user-attachments/assets/f32cacb2-279c-41b3-8c5d-ef2e9e20321b' width="69%">
+<img src='https://github.com/user-attachments/assets/2788af4e-3b1e-4c2e-9813-0629872c4d43' width="69%">
+
+**Materiały do wykorzystania**
+
+![Group 4(1)](https://github.com/user-attachments/assets/abe1b38f-0e28-4723-9bae-26848a46327b)
+
+- Ikony: [SVGRepo](https://svgrepo.com/)
+- Kolorystyka: #9A5D32, #F5DEB3, #B48C70, #89FD7F, #E8E8E8
+- Czcionki: [Jua](https://fonts.google.com/specimen/Jua?query=Jua), [Lemon](https://fonts.google.com/specimen/Lemon?query=Lemon)
+- Schemat bazy danych:
+<img src='https://github.com/user-attachments/assets/d8acf8a5-ca9a-4bd8-a230-4845622a77e0' width="69%">
 
    
+</details>
+
+---
+
+<details>
+   <summary>
+
+   ### 0. **Biblioteka w Książkowicach Wielkich** / 1 os.
+      
+   </summary>
+   
+<img src='https://github.com/user-attachments/assets/e307d1b0-8c26-44e8-a8e0-2be92c082a37' width="69%">
+
+
+**Materiały do wykorzystania**
+
+- Ikony: [SVGRepo](https://svgrepo.com/)
+- Kolorystyka: #064D3F, #B2DFDA, #AB6939, #282B2A
+- Czcionki: [Inika](https://fonts.google.com/specimen/Inika?query=Inika), [Inria Serif](https://fonts.google.com/specimen/Inria+Serif?query=Inria+serif) lub [Sans](https://fonts.google.com/specimen/Inria+Sans?query=Inria+sans)
+- Baza danych:
+```mysql
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Cze 04, 2024 at 11:49 AM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `biblioteka`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `autorzy`
+--
+
+CREATE TABLE `autorzy` (
+`id` int(11) NOT NULL,
+`imie` varchar(15) NOT NULL,
+`nazwisko` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `autorzy`
+--
+
+INSERT INTO `autorzy` (`id`, `imie`, `nazwisko`) VALUES
+(1, 'Adam', 'Mickiewicz'),
+(2, 'Henryk', 'Sienkiewicz');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `czytelnicy`
+--
+
+CREATE TABLE `czytelnicy` (
+`id` int(11) NOT NULL,
+`imie` varchar(30) NOT NULL,
+`nazwisko` varchar(50) NOT NULL,
+`kod` varchar(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `czytelnicy`
+--
+
+INSERT INTO `czytelnicy` (`id`, `imie`, `nazwisko`, `kod`) VALUES
+(1, 'Kamil', 'Nowak', '666666'),
+(2, 'Borubar', 'Kostecki', '098123'),
+(3, 'Bartosz', 'Barotoszowicz', '123123'),
+(4, 'Michał', 'Jachaś', '690420');
+(5, 'Jan', 'Torpeda', '120330');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `kategorie`
+--
+
+CREATE TABLE `kategorie` (
+`id` int(11) NOT NULL,
+`nazwa` varchar(46) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kategorie`
+--
+
+INSERT INTO `kategorie` (`id`, `nazwa`) VALUES
+(1, 'Sci-Fi'),
+(2, 'Fantasy'),
+(3, 'Historyczne'),
+(4, 'Dramat');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `ksiazki`
+--
+
+CREATE TABLE `ksiazki` (
+`id` int(11) NOT NULL,
+`id_kategoria` int(11) NOT NULL,
+`tytul` varchar(255) NOT NULL,
+`id_autor` int(11) NOT NULL,
+`id_wydawnictwo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ksiazki`
+--
+
+INSERT INTO `ksiazki` (`id`, `id_kategoria`, `tytul`, `id_autor`, `id_wydawnictwo`) VALUES
+(1, 3, 'Galaktyczne lektury', 2, 1),
+(2, 2, 'Ogniem i mieczem', 1, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wydawnictwa`
+--
+
+CREATE TABLE `wydawnictwa` (
+`id` int(11) NOT NULL,
+`nazwa` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `wydawnictwa`
+--
+
+INSERT INTO `wydawnictwa` (`id`, `nazwa`) VALUES
+(1, 'Helion'),
+(2, 'Sowa SA');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `wypozyczenia`
+--
+
+CREATE TABLE `wypozyczenia` (
+`id` int(20) NOT NULL,
+`id_czytelnik` int(11) NOT NULL,
+`id_ksiazka` int(11) NOT NULL,
+`data_wypozyczenia` date NOT NULL,
+`data_oddania` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `wypozyczenia`
+--
+
+INSERT INTO `wypozyczenia` (`id`, `id_czytelnik`, `id_ksiazka`, `data_wypozyczenia`, `data_oddania`) VALUES
+(2, 2, 1, '2024-06-05', '2024-06-30'),
+(3, 1, 2, '2024-06-05', '2024-06-06'),
+(4, 4, 2, '2024-06-04', '2024-06-26'),
+(5, 3, 2, '2024-06-03', '2024-06-07');
+
+--
+-- Indeksy dla zrzutów tabel
+--
+
+--
+-- Indeksy dla tabeli `autorzy`
+--
+ALTER TABLE `autorzy`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `czytelnicy`
+--
+ALTER TABLE `czytelnicy`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `kategorie`
+--
+ALTER TABLE `kategorie`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `ksiazki`
+--
+ALTER TABLE `ksiazki`
+ADD PRIMARY KEY (`id`),
+ADD KEY `kategoria_fk` (`id_kategoria`),
+ADD KEY `autor_fk` (`id_autor`),
+ADD KEY `wydawnictwo_fk` (`id_wydawnictwo`);
+
+--
+-- Indeksy dla tabeli `wydawnictwa`
+--
+ALTER TABLE `wydawnictwa`
+ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `wypozyczenia`
+--
+ALTER TABLE `wypozyczenia`
+ADD PRIMARY KEY (`id`),
+ADD KEY `czytenik_fk` (`id_czytelnik`),
+ADD KEY `ksiazka_fk` (`id_ksiazka`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `autorzy`
+--
+ALTER TABLE `autorzy`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `czytelnicy`
+--
+ALTER TABLE `czytelnicy`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `kategorie`
+--
+ALTER TABLE `kategorie`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `ksiazki`
+--
+ALTER TABLE `ksiazki`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `wydawnictwa`
+--
+ALTER TABLE `wydawnictwa`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `wypozyczenia`
+--
+ALTER TABLE `wypozyczenia`
+MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `ksiazki`
+--
+ALTER TABLE `ksiazki`
+ADD CONSTRAINT `autor_fk` FOREIGN KEY (`id_autor`) REFERENCES `autorzy` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `kategoria_fk` FOREIGN KEY (`id_kategoria`) REFERENCES `kategorie` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `wydawnictwo_fk` FOREIGN KEY (`id_wydawnictwo`) REFERENCES `wydawnictwa` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `wypozyczenia`
+--
+ALTER TABLE `wypozyczenia`
+ADD CONSTRAINT `czytenik_fk` FOREIGN KEY (`id_czytelnik`) REFERENCES `czytelnicy` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `ksiazka_fk` FOREIGN KEY (`id_ksiazka`) REFERENCES `ksiazki` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+```   
 </details>
 
 ---
@@ -395,4 +688,17 @@
 
 </details>
 
+</div>
+
+<div align="right">
+<blockquote>
+<sub>
+<sub>
+<sub align="right">
+   Standard akcje wakacje w Vaterlandzie<br>
+   O 14 pod teatrem na popychawce [...]
+</sub>
+</sub>
+</sub>
+</blockquote>
 </div>
