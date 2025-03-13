@@ -11,6 +11,20 @@
 ## Projekty `zadaniowe`
 
 <details>
+   <summary>
+
+   ### 0. **Biblioteka w Książkowicach Wielkich** / 1 os.
+      
+   </summary>
+
+<img src='https://github.com/user-attachments/assets/f32cacb2-279c-41b3-8c5d-ef2e9e20321b' width="69%">
+
+   
+</details>
+
+---
+
+<details>
    <summary> 
       
    ### 1. **UFO Anomalies** / 1 os. 
