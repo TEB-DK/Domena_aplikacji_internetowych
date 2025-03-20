@@ -115,7 +115,7 @@ INSERT INTO `czytelnicy` (`id`, `imie`, `nazwisko`, `kod`) VALUES
 (1, 'Kamil', 'Nowak', '666666'),
 (2, 'Borubar', 'Kostecki', '098123'),
 (3, 'Bartosz', 'Barotoszowicz', '123123'),
-(4, 'Michał', 'Jachaś', '690420');
+(4, 'Michał', 'Jachaś', '690420'),
 (5, 'Jan', 'Torpeda', '120330');
 
 -- --------------------------------------------------------
