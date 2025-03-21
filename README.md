@@ -13,6 +13,28 @@
 <details>
    <summary>
 
+   ### -2. **WebCV** / 1 os.
+      
+   </summary>
+
+<img src='https://github.com/user-attachments/assets/cb711fe8-b5fd-4911-bcb6-5f3a7d6eca89' width="69%">
+
+<img src='https://github.com/user-attachments/assets/07232b98-ff0a-4119-a504-23b6eb7eba9b' width="69%">
+
+**Materiały do wykorzystania**
+
+- Ikony: [SVGRepo](https://svgrepo.com/)
+- Kolorystyka: #1E1E1E, #0B8673, #F5FAFF
+- Czcionki: [Nunito](https://fonts.google.com/specimen/Nunito), [Lilita One](https://fonts.google.com/specimen/Lilita+One)
+- Avatar: [Color Avatar](https://vue-color-avatar.leoku.dev/)
+   
+</details>
+
+---
+
+<details>
+   <summary>
+
    ### -1. **CoffiShop** / 1 os.
       
    </summary>
