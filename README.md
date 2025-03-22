@@ -13,9 +13,94 @@
 <details>
    <summary>
 
+   ### -3. **Sweet Candy Factory** / 1 os.
+      
+   </summary>
+
+**Wygląd strony**
+
+<img src='https://github.com/user-attachments/assets/9b45987a-85cd-4085-97cc-c95ed831a4db' width="69%">
+
+**Materiały do wykorzystania**
+
+- Ikony: [SVGRepo](https://svgrepo.com/)
+- Kolorystyka: #FFD41D, #0084FF, #FF638A, #F3437F, #E5E5E5, #121212, #FAFAFA
+- Czcionki: [Fredoka](https://fonts.google.com/specimen/Fredoka?query=Fredoka)
+- Baza danych:
+```sql
+
+CREATE TABLE category (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    image_filename VARCHAR(255)
+);
+
+INSERT INTO category (name, image_filename) VALUES
+('Poisonous Candy', 'poison.png'),
+('Mint Candy', 'candy.png'),
+('Piñata Candy', 'pinata.png'),
+('Sugar Candy', 'candysugar.png'),
+('Chocolate', 'chocolate.png'),
+('Wrapped Candy', 'wrappedcandy.png'),
+('Halloween Candy', 'candyhalloween.png'),
+('Candy Bucket', 'candysweet.png'),
+('Candy Cane', 'canecandy.png');
+
+CREATE TABLE candies (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    description TEXT,
+    stock INT,
+    max_stock INT,
+    category_id INT,
+    price DECIMAL(5,2),
+    contains_alcohol BOOLEAN,
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
+
+INSERT INTO candies (name, description, stock, max_stock, category_id, price, contains_alcohol) VALUES
+('Toxic Delight', 'Mysterious candy with a strong kick.', 100, 500, 1, 6.99, TRUE),
+('Skull Syrup', 'Spooky syrup-like candy.', 120, 400, 1, 5.99, FALSE),
+('Venom Drops', 'Sour drops with an intense flavor.', 80, 300, 1, 4.49, FALSE),
+('Peppermint Swirl', 'Classic peppermint candy.', 0, 800, 2, 2.99, FALSE),
+('Winter Breeze', 'Cool mint flavor with a hint of vanilla.', 150, 600, 2, 3.49, FALSE),
+('Frosty Mint Chews', 'Soft and chewy mint candy.', 90, 400, 2, 4.29, FALSE),
+('Piñata Surprise', 'A mix of fruity and chewy candies.', 300, 1000, 3, 5.99, FALSE),
+('Fiesta Mix', 'A vibrant assortment of flavors.', 240, 700, 3, 5.49, FALSE),
+('Party Blast', 'Explosive fruit-filled candies.', 180, 600, 3, 6.29, FALSE),
+('Golden Stripes', 'Sweet caramelized sugar sticks.', 260, 900, 4, 3.99, FALSE),
+('Classic Rock Candy', 'Hard and crunchy sugar candy.', 190, 700, 4, 4.29, FALSE),
+('Rainbow Sticks', 'Colorful sugar sticks with fruity flavors.', 170, 600, 4, 4.99, FALSE),
+('Dark Choco Bites', 'Rich and smooth dark chocolate.', 0, 1000, 5, 6.99, FALSE),
+('Caramel-Filled Chocolate', 'Sweet caramel inside a chocolate shell.', 300, 800, 5, 7.49, FALSE),
+('Rum Truffles', 'Delicious truffles with a touch of rum.', 90, 300, 5, 8.99, TRUE),
+('Golden Caramel Wraps', 'Soft caramel wrapped in golden foil.', 230, 900, 6, 4.99, FALSE),
+('Fruit Explosion', 'Wrapped fruit-flavored chewy candy.', 210, 800, 6, 3.99, FALSE),
+('Lemon Zest Wraps', 'Sweet and tangy lemon candy.', 140, 600, 6, 4.29, FALSE),
+('Pumpkin Spice Treats', 'Spooky pumpkin-flavored candy.', 0, 700, 7, 5.99, FALSE),
+('Spooky Gummies', 'Halloween-themed gummy candies.', 180, 800, 7, 4.99, FALSE),
+('Witch’s Brew', 'A mysterious mix of sour and sweet.', 130, 500, 7, 6.49, FALSE),
+('Jack-o-Lantern Mix', 'A Halloween bucket filled with sweets.', 250, 1000, 8, 9.99, FALSE),
+('Surprise Candy Basket', 'A variety of candies in a cute bucket.', 200, 800, 8, 8.49, FALSE),
+('Deluxe Candy Assortment', 'Premium selection of candies.', 140, 600, 8, 10.99, FALSE),
+('Classic Candy Cane', 'Traditional peppermint candy cane.', 300, 1000, 9, 2.49, FALSE),
+('Chocolate Dipped Cane', 'Candy cane with chocolate coating.', 260, 800, 9, 3.99, FALSE),
+('Berry Swirl Cane', 'Fruity candy cane with berry flavors.', 180, 600, 9, 3.49, FALSE);
+
+```
+   
+</details>
+
+---
+
+<details>
+   <summary>
+
    ### -2. **WebCV** / 1 os.
       
    </summary>
+
+**Wygląd strony**
 
 <img src='https://github.com/user-attachments/assets/cb711fe8-b5fd-4911-bcb6-5f3a7d6eca89' width="69%">
 
@@ -38,6 +123,8 @@
    ### -1. **CoffiShop** / 1 os.
       
    </summary>
+
+**Wygląd strony**
 
 <img src='https://github.com/user-attachments/assets/2788af4e-3b1e-4c2e-9813-0629872c4d43' width="69%">
 
@@ -62,9 +149,10 @@
    ### 0. **Biblioteka w Książkowicach Wielkich** / 1 os.
       
    </summary>
+
+**Wygląd strony**
    
 <img src='https://github.com/user-attachments/assets/e307d1b0-8c26-44e8-a8e0-2be92c082a37' width="69%">
-
 
 **Materiały do wykorzystania**
 
