@@ -19,7 +19,7 @@
 
 **Wygląd strony**
 
-<img src='https://github.com/user-attachments/assets/9b45987a-85cd-4085-97cc-c95ed831a4db' width="69%">
+<img src='https://github.com/user-attachments/assets/17b57750-95b8-4f3f-8755-9242ddce7343' width="69%">
 
 **Materiały do wykorzystania**
 
