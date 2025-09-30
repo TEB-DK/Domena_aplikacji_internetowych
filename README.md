@@ -24,7 +24,14 @@
    **Materiały od wykorzystania**
    - Ikony: [SVGRepo](https://svgrepo.com/)
    - Tło: [Template](https://jumpshare.com/s/85c2KkGpm1Q50RsIDVak)
-   - Kolorystyka: #FAC748, #E5E6EB, #493FA7, #1B2021, #027DE5, #000000, #FAFAFA
+   - Kolorystyka: <div display='flex'>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=FAC748'> <p>#FAC748</p>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=E5E6EB'> <p>#E5E6EB</p>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=027DE5'> <p>#027DE5</p> 
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=493FA7'> <p>#493FA7</p> 
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=1B2021'> <p>#1B2021</p> 
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=000000'> <p>#000000</p>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=FAFAFA'> <p>#FAFAFA</p> </div>
 
 </details>
 
