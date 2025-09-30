@@ -13,6 +13,25 @@
 <details>
    <summary>
 
+   ### -4. **Time & Date Page** / 1 os.
+      
+   </summary>
+
+   **Wygląd strony**
+
+   <img width="69%" alt="timedate" src="https://github.com/user-attachments/assets/6b482917-4375-416d-9ed2-c736333079b3" />
+
+   **Materiały od wykorzystania**
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Tło: [Template](https://jumpshare.com/s/85c2KkGpm1Q50RsIDVak)
+   
+</details>
+
+---
+
+<details>
+   <summary>
+
    ### -3. **Sweet Candy Factory** / 1 os.
       
    </summary>
