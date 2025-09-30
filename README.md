@@ -24,7 +24,8 @@
    **Materiały od wykorzystania**
    - Ikony: [SVGRepo](https://svgrepo.com/)
    - Tło: [Template](https://jumpshare.com/s/85c2KkGpm1Q50RsIDVak)
-   
+   - Kolorystyka: #FAC748, #E5E6EB, #493FA7, #1B2021, #027DE5, #000000, #FAFAFA
+
 </details>
 
 ---
