@@ -32,10 +32,7 @@
 
    **Polecenie do skryptu**
    
-   > [!NOTE]
-   > Na podstronie `Kalkulator rat` należy wykorzystać język `Javascript` do obliczenia miesięcznej raty za wybrane kursy, jeżeli żaden kurs nie zostanie wybrany, należy wyświetlić alert z odpowiednim komunikatem po kliknięciu przycisku "Oblicz". Liczba rat musi być mniejsza bądź równa `36` ale większa niż `1`, aby możliwe było wyliczenie raty.
-   > 
-   > Po kliknięciu checkbox'a wybierającego kurs, należy zaktualizować dynamicznie pole kalkulacyjne znajdujące się pod polem wprowadzenia ilości rat. 
+   `Na podstronie Kalkulator rat należy wykorzystać język Javascript do obliczenia miesięcznej raty za wybrane kursy, jeżeli żaden kurs nie zostanie wybrany, należy wyświetlić alert z odpowiednim komunikatem po kliknięciu przycisku "Oblicz". Liczba rat musi być mniejsza bądź równa 36 ale większa niż 1, aby możliwe było wyliczenie raty. Po kliknięciu checkbox'a wybierającego kurs, należy zaktualizować dynamicznie pole kalkulacyjne znajdujące się pod polem wprowadzenia ilości rat`
 
 
 </details>
