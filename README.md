@@ -27,6 +27,7 @@
    - Ikony: [SVGRepo](https://svgrepo.com/)
    - Logo: <img align='center' width="312" height="115" alt="LOGO (1)" src="https://github.com/user-attachments/assets/ba5e4192-cb67-4ada-9306-887301d18d98" />
    - Tło mapy: <img align='center' width="225" height="79" alt="mapa" src="https://github.com/user-attachments/assets/71de1c0b-3cdf-4ab1-b57c-8e6ebaf5f5a9" />
+   - Tło headera: <img align='center' height="100" alt="heading_bg" src="https://github.com/user-attachments/assets/05907420-fb08-4f53-9bf5-b3602198a61e" />
    - Kolorystyka: #000000, #4B4B4B, #EAC100, #FAFAFA, #61DBFB, #42B883, #787CB5, #BC0B15, #D9D9D9
    - Czcionka: [Inter](https://fonts.google.com/specimen/Inter) 
 
