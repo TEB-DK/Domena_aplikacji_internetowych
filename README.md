@@ -13,6 +13,38 @@
 <details>
    <summary>
 
+   ### -5. **Futurit - Kursy komputerowe** / 1 os.
+      
+   </summary>
+
+   **Wygląd strony**
+
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Strona główna" src="https://github.com/user-attachments/assets/5116112f-40dd-46b5-9692-0cc6203470e5" />
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Kalkulator rat" src="https://github.com/user-attachments/assets/dae9d7dc-8872-4ed6-9235-708347a4f7b0" />
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Nasz partner (1)" src="https://github.com/user-attachments/assets/326961b1-7917-4576-b570-975f5678a9e1" />
+
+   **Materiały od wykorzystania**
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Logo: <img align='center' width="312" height="115" alt="LOGO (1)" src="https://github.com/user-attachments/assets/ba5e4192-cb67-4ada-9306-887301d18d98" />
+   - Tło mapy: <img align='center' width="225" height="79" alt="mapa" src="https://github.com/user-attachments/assets/71de1c0b-3cdf-4ab1-b57c-8e6ebaf5f5a9" />
+   - Kolorystyka: #000000, #4B4B4B, #EAC100, #FAFAFA, #61DBFB, #42B883, #787CB5, #BC0B15, #D9D9D9
+   - Czcionka: [Inter](https://fonts.google.com/specimen/Inter) 
+
+   **Polecenie do skryptu**
+   
+   > [!NOTE]
+   > Na podstronie `Kalkulator rat` należy wykorzystać język `Javascript` do obliczenia miesięcznej raty za wybrane kursy, jeżeli żaden kurs nie zostanie wybrany, należy wyświetlić alert z odpowiednim komunikatem po kliknięciu przycisku "Oblicz". Liczba rat musi być mniejsza bądź równa `36` ale większa niż `1`, aby możliwe było wyliczenie raty.
+   > 
+   > Po kliknięciu checkbox'a wybierającego kurs, należy zaktualizować dynamicznie pole kalkulacyjne znajdujące się pod polem wprowadzenia ilości rat. 
+
+
+</details>
+
+---
+
+<details>
+   <summary>
+
    ### -4. **Time & Date Page** / 1 os.
       
    </summary>
