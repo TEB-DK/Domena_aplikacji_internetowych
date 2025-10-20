@@ -19,9 +19,9 @@
 
    **Wygląd strony**
 
-   - <img align='center' width="69%" alt="MacBook Pro 14_ - Strona główna" src="https://github.com/user-attachments/assets/5116112f-40dd-46b5-9692-0cc6203470e5" />
-   - <img align='center' width="69%" alt="MacBook Pro 14_ - Kalkulator rat" src="https://github.com/user-attachments/assets/dae9d7dc-8872-4ed6-9235-708347a4f7b0" />
-   - <img align='center' width="69%" alt="MacBook Pro 14_ - Nasz partner (1)" src="https://github.com/user-attachments/assets/326961b1-7917-4576-b570-975f5678a9e1" />
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Strona główna" src="https://github.com/user-attachments/assets/27147f3b-e0d9-4920-ae09-4f00a5257744" />
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Kalkulator rat" src="https://github.com/user-attachments/assets/862358ad-e55c-428e-9e5b-01de8e191bf0" />
+   - <img align='center' width="69%" alt="MacBook Pro 14_ - Nasz partner" src="https://github.com/user-attachments/assets/7e4fb7c9-5134-4c0e-9a56-39214b9a06ad" />
 
    **Materiały od wykorzystania**
    - Ikony: [SVGRepo](https://svgrepo.com/)
