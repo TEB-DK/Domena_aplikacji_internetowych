@@ -29,7 +29,50 @@
    - Tło mapy: <img align='center' width="225" height="79" alt="mapa" src="https://github.com/user-attachments/assets/71de1c0b-3cdf-4ab1-b57c-8e6ebaf5f5a9" />
    - Tło headera: <img align='center' height="100" alt="heading_bg" src="https://github.com/user-attachments/assets/05907420-fb08-4f53-9bf5-b3602198a61e" />
    - Kolorystyka: #000000, #4B4B4B, #EAC100, #FAFAFA, #61DBFB, #42B883, #787CB5, #BC0B15, #D9D9D9
-   - Czcionka: [Inter](https://fonts.google.com/specimen/Inter) 
+   - Czcionka: [Inter](https://fonts.google.com/specimen/Inter)
+   - <details>
+      
+      <summary>Baza danych:</summary>
+      
+```
+-- Tworzenie bazy danych
+CREATE DATABASE futurit;
+USE futurit;
+
+-- Tabela: Kursy
+CREATE TABLE kursy (
+    id_kursu INT AUTO_INCREMENT PRIMARY KEY,
+    nazwa VARCHAR(100) NOT NULL,
+    cena DECIMAL(10, 2) NOT NULL,
+    czas_trwania VARCHAR(50) NOT NULL
+);
+
+-- Tabela: Kontakt
+CREATE TABLE kontakt (
+    id_kontaktu INT AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(50) NOT NULL,
+    numer_telefonu VARCHAR(20),
+    tresc_wiadomosci TEXT,
+    nawiazany BOOLEAN DEFAULT FALSE
+);
+-- Wstawienie przykładowych kursów
+INSERT INTO kursy (nazwa, cena, czas_trwania)
+VALUES
+('React', 499.99, '6 tygodni'),
+('Vue.JS', 699.00, '8 tygodni'),
+('PHP', 299.50, '4 tygodnie');
+
+-- Wstawienie przykładowych kontaktów
+INSERT INTO kontakt (imie, numer_telefonu, tresc_wiadomosci, nawiazany)
+VALUES
+('Anna', '123456789', 'Chciałabym zapisać się na kurs Pythona.', TRUE),
+('Marek', '987654321', 'Czy są dostępne zniżki dla studentów?', FALSE);
+
+```
+
+   </details>
+
+
 
    **Polecenie do skryptu**
    
