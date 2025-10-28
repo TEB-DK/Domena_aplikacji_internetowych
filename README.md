@@ -30,11 +30,8 @@
    - Tło headera: <img align='center' height="100" alt="heading_bg" src="https://github.com/user-attachments/assets/05907420-fb08-4f53-9bf5-b3602198a61e" />
    - Kolorystyka: #000000, #4B4B4B, #EAC100, #FAFAFA, #61DBFB, #42B883, #787CB5, #BC0B15, #D9D9D9
    - Czcionka: [Inter](https://fonts.google.com/specimen/Inter)
-   - <details>
-      
-      <summary>Baza danych:</summary>
-      
-```
+   - Baza danych:
+```sql
 -- Tworzenie bazy danych
 CREATE DATABASE futurit;
 USE futurit;
@@ -69,9 +66,6 @@ VALUES
 ('Marek', '987654321', 'Czy są dostępne zniżki dla studentów?', FALSE);
 
 ```
-
-   </details>
-
 
 
    **Polecenie do skryptu**
