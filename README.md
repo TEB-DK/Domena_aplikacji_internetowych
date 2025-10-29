@@ -13,6 +13,29 @@
 <details>
    <summary>
 
+   ### -6. **PrzeRZUT - Usługi transportowe** / 1 os.
+   
+   </summary>
+
+   **Wygląd strony**
+
+   - <img width="69%" alt="Bettered - INF_03_2025_06_04_SG" src="https://github.com/user-attachments/assets/987c8943-83a3-41b0-a672-8d3febaab507" />
+
+   **Materiały od wykorzystania**
+   - Egzamin: [Arkusz](https://www.praktycznyegzamin.pl/inf03ee09e14/praktyka/file/arkusze/2025/lato/inf_03_2025_06_04_SG_kolor.pdf)
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Logo: <img width="200" alt="PrzeRZUT" src="https://github.com/user-attachments/assets/196cd0be-71f3-4dc5-9c53-c15bd487b3be" />
+   - Kolorystyka: #3CA666, #0A6446, #B7B7B7, #222222
+   - Czcionka: Arial
+   
+
+</details>
+
+---
+
+<details>
+   <summary>
+
    ### -5. **Futurit - Kursy komputerowe** / 1 os.
       
    </summary>
