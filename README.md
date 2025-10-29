@@ -24,7 +24,8 @@
    **Materiały od wykorzystania**
    - Egzamin: [Arkusz](https://www.praktycznyegzamin.pl/inf03ee09e14/praktyka/file/arkusze/2025/lato/inf_03_2025_06_04_SG_kolor.pdf)
    - Ikony: [SVGRepo](https://svgrepo.com/)
-   - Logo: <img width="200" alt="PrzeRZUT" src="https://github.com/user-attachments/assets/196cd0be-71f3-4dc5-9c53-c15bd487b3be" />
+   - Logo: <img height="300" alt="PrzeRZUT" src="https://github.com/user-attachments/assets/196cd0be-71f3-4dc5-9c53-c15bd487b3be" />
+   - Ducato: <img height="300" alt="ducato 1" src="https://github.com/user-attachments/assets/bce2a3ff-2431-4e66-8a9f-8f0c6a6ea104" />
    - Kolorystyka: #3CA666, #0A6446, #B7B7B7, #222222
    - Czcionka: Arial
    
