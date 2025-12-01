@@ -20,7 +20,7 @@
 
    **Wygląd strony**
    
-   - <img width="69%" alt="MacBook Pro 14_ - inf_03_2025_06_01_SG" src="https://github.com/user-attachments/assets/f1ccef03-84a2-4faf-8d1e-a6f58a10a364" />
+   - <img width="69%" alt="MacBook Pro 14_ - inf_03_2025_06_01_SG (1)" src="https://github.com/user-attachments/assets/6ede8e93-9c20-425a-a1ff-a428b7944feb" />
 
    **Materiały od wykorzystania**
    - Egzamin: [Arkusz](https://www.praktycznyegzamin.pl/inf03ee09e14/praktyka/file/arkusze/2025/lato/inf_03_2025_06_01_SG_kolor.pdf)
