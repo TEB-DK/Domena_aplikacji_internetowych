@@ -10,6 +10,31 @@
 
 ## Projekty `zadaniowe`
 
+
+<details>
+   <summary>
+
+   ### -7. **Gamelypso - Portal o grach** / 1 os.
+   
+   </summary>
+
+   **Wygląd strony**
+   
+   - <img width="69%" alt="MacBook Pro 14_ - inf_03_2025_06_01_SG" src="https://github.com/user-attachments/assets/f1ccef03-84a2-4faf-8d1e-a6f58a10a364" />
+
+   **Materiały od wykorzystania**
+   - Egzamin: [Arkusz](https://www.praktycznyegzamin.pl/inf03ee09e14/praktyka/file/arkusze/2025/lato/inf_03_2025_06_01_SG_kolor.pdf)
+   - Materiały: [Pobierz](https://egzamin-informatyk.pl/arkusze/PlikiCz202501.7z)
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Kolorystyka: #4B0081, #F4674D, #FAFAFA, #171717, #5E5E5E, #D9D9D9, #A2A2A2
+   - Czcionka: [Joan](https://fonts.google.com/specimen/Joan)
+   
+
+</details>
+
+
+---
+
 <details>
    <summary>
 
