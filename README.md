@@ -24,7 +24,7 @@
 
    **Materiały od wykorzystania**
    - Egzamin: [Arkusz](https://www.praktycznyegzamin.pl/inf03ee09e14/praktyka/file/arkusze/2025/lato/inf_03_2025_06_01_SG_kolor.pdf)
-   - Materiały: [Pobierz](https://egzamin-informatyk.pl/arkusze/PlikiCz202501.7z)
+   - Materiały: [Pobierz](https://www.dropbox.com/scl/fo/45mlp5g8a8jgchoc2dk8u/AGIzR7asEXCDc38xqywAp1A?rlkey=huuywhcb7j6zq0gi488st34vj&st=833dt0c0&dl=0)
    - Ikony: [SVGRepo](https://svgrepo.com/)
    - Kolorystyka: #4B0081, #F4674D, #FAFAFA, #171717, #5E5E5E, #D9D9D9, #A2A2A2
    - Czcionka: [Joan](https://fonts.google.com/specimen/Joan)
