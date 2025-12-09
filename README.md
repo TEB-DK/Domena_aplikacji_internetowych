@@ -27,6 +27,11 @@
    - Ikony: [SVGRepo](https://svgrepo.com/)
    - Kolorystyka: #2DA046, #E0FAD7, #3F3F3F, #FFFFFF, #000000
    - Czcionka: [Poppins](https://fonts.google.com/specimen/Poppins)
+   - Opis funkcjonalności:
+        - Funkcja sortowania (z wyborem select) reagująca po wciśnięciu przycisku "Sortuj".
+             - Opcje sortowania są następujące: `Od najdroższych do najtańszych`; `Od najtańszych do najdroższych`; `Ostatnio dodane`; `Ulubione`.
+        - Wyszukiwanie produktów z bazy danych i wyświetlanie ich w polu "najpopularniejsze produkty", wykorzystać należy `LIKE` w zapytaniu SQL.
+        - Po kliknięciu serduszka przy produkcie, zostaje zmieniona kolumna `favorite` w tabeli `prodcuts` i wyświetla się w opcji sortowania po "ulubionych"
    - Baza danych:
 
    ```sql
@@ -44,6 +49,7 @@ CREATE TABLE products (
     name VARCHAR(200) NOT NULL,
     price DECIMAL(10,2) NOT NULL,
     description TEXT NULL,
+    favorite TINYINT(1) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
@@ -52,20 +58,6 @@ CREATE TABLE product_images (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
     image_url VARCHAR(255) NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id)
-);
-
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(200) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE favorites (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    product_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
