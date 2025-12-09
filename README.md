@@ -14,6 +14,255 @@
 <details>
    <summary>
 
+   ### -9. **Shus - Sklep z butami** / 1 os.
+   
+   </summary>
+
+   **Wygląd strony**
+   
+   - <img width="69%" alt="MacBook Pro 14_ - 1" src="https://github.com/user-attachments/assets/3288c5e4-707e-49a2-a078-bc68cc57d454" />
+
+   **Materiały od wykorzystania**
+   - Materiały: [Pliki](https://www.dropbox.com/scl/fo/1oqqsimz841iogswqqv36/AHHhHLTj0_SP3_DzdvQpgkw?rlkey=t3izl4x06a11038mjbntv121a&st=1qno7ivh&dl=0)
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Kolorystyka: #2DA046, #E0FAD7, #3F3F3F, #FFFFFF, #000000
+   - Czcionka: [Poppins](https://fonts.google.com/specimen/Poppins)
+   - Baza danych:
+
+   ```sql
+CREATE DATABASE shus;
+USE shus;
+
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
+    name VARCHAR(200) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    description TEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE product_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    image_url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(200) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE favorites (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+INSERT INTO categories (name) VALUES
+('Futuristic'),
+('TRX'),
+('AeroStep'),
+('VoltRun'),
+('UrbanKicks'),
+('TrailForge'),
+('NovaSprint'),
+('SkyFlex'),
+('TerraMove'),
+('PrimeStride'),
+('MoonPulse'),
+('StreetWave');
+
+INSERT INTO products (category_id, name, price) VALUES
+(1, 'Futuristic X2', 333),
+(1, 'Futuristic X2 Black', 364),
+(1, 'Futuristic High', 364),
+(1, 'Futuristic X2 Low Blue', 400),
+(2, 'TRX Classic High', 185),
+(2, 'TRX Bulky', 160),
+(2, 'TRX Bulky 2', 120),
+(2, 'TRX Default', 100),
+(2, 'TRX Casual', 120),
+(2, 'TRX Bulky Moro', 689),
+(3, 'AeroStep Breeze X1', 289),
+(3, 'AeroStep Breeze X2', 319),
+(3, 'AeroStep UltraLite', 399),
+(3, 'AeroStep Flow Runner', 359),
+(3, 'AeroStep CloudMax', 449),
+(3, 'AeroStep WindRush', 279),
+(3, 'AeroStep Phantom Walk', 379),
+(3, 'AeroStep Velocity Pro', 499),
+(3, 'AeroStep SoarLite', 229),
+(3, 'AeroStep AirDrive', 339),
+(4, 'VoltRun Bolt X1', 349),
+(4, 'VoltRun Bolt X2', 389),
+(4, 'VoltRun ShockWave', 459),
+(4, 'VoltRun EnergyFlex', 299),
+(4, 'VoltRun NitroPulse', 529),
+(4, 'VoltRun ReactPro', 399),
+(4, 'VoltRun IgniteMax', 449),
+(4, 'VoltRun FlashStep', 279),
+(4, 'VoltRun PhaseRunner', 359),
+(4, 'VoltRun ElectraFlow', 429),
+(5, 'UrbanKicks Classic High', 199),
+(5, 'UrbanKicks StreetLow', 159),
+(5, 'UrbanKicks RetroWave', 249),
+(5, 'UrbanKicks MonoLite', 189),
+(5, 'UrbanKicks PatchStyle', 175),
+(5, 'UrbanKicks PrimeHigh', 219),
+(5, 'UrbanKicks UrbanFlex', 289),
+(5, 'UrbanKicks PureWhite', 149),
+(5, 'UrbanKicks StreetRad', 169),
+(5, 'UrbanKicks NeoGrip', 239),
+(6, 'TrailForge MountainGrip', 599),
+(6, 'TrailForge Summit X2', 649),
+(6, 'TrailForge RidgeWalker', 529),
+(6, 'TrailForge TerrainMax', 579),
+(6, 'TrailForge TrekPro', 619),
+(6, 'TrailForge RockTrail', 489),
+(6, 'TrailForge BushRunner', 539),
+(6, 'TrailForge ToughClimb', 559),
+(6, 'TrailForge WildPath', 499),
+(6, 'TrailForge PeakMotion', 569),
+(7, 'NovaSprint SpeedX', 329),
+(7, 'NovaSprint SpeedX Pro', 379),
+(7, 'NovaSprint HyperRun', 449),
+(7, 'NovaSprint FeatherLite', 299),
+(7, 'NovaSprint AeroFast', 339),
+(7, 'NovaSprint NitroBoost', 459),
+(7, 'NovaSprint VectorRun', 409),
+(7, 'NovaSprint SharpFlux', 289),
+(7, 'NovaSprint MotionPrime', 369),
+(7, 'NovaSprint AccelEdge', 399),
+(8, 'SkyFlex CloudStep', 279),
+(8, 'SkyFlex CloudStep X2', 309),
+(8, 'SkyFlex FeatherRide', 329),
+(8, 'SkyFlex SkyMax', 389),
+(8, 'SkyFlex NimbusFlex', 429),
+(8, 'SkyFlex SoftFlow', 259),
+(8, 'SkyFlex AirRise', 349),
+(8, 'SkyFlex GlideWave', 309),
+(8, 'SkyFlex ComfortLine', 239),
+(8, 'SkyFlex AirNova', 359),
+(9, 'TerraMove EarthGrip', 469),
+(9, 'TerraMove TerraCore', 499),
+(9, 'TerraMove RootRunner', 389),
+(9, 'TerraMove SoilFlex', 359),
+(9, 'TerraMove HardTrail', 549),
+(9, 'TerraMove CliffPro', 579),
+(9, 'TerraMove RawTrack', 429),
+(9, 'TerraMove CoreMotion', 399),
+(9, 'TerraMove GeoStep', 349),
+(9, 'TerraMove PrimeTrail', 519);
+
+
+
+
+
+
+
+INSERT INTO product_images (product_id, image_url) VALUES
+(1, 'img/product_1.png'),
+(2, 'img/product_2.png'),
+(3, 'img/product_3.png'),
+(4, 'img/product_4.png'),
+(5, 'img/product_5.png'),
+(6, 'img/product_6.png'),
+(7, 'img/product_7.png'),
+(8, 'img/product_8.png'),
+(9, 'img/product_9.png'),
+(10, 'img/product_1.png'),
+(11, 'img/product_1.png'),
+(12, 'img/product_2.png'),
+(13, 'img/product_3.png'),
+(14, 'img/product_4.png'),
+(15, 'img/product_5.png'),
+(16, 'img/product_6.png'),
+(17, 'img/product_7.png'),
+(18, 'img/product_8.png'),
+(19, 'img/product_9.png'),
+(20, 'img/product_2.png'),
+(21, 'img/product_1.png'),
+(22, 'img/product_2.png'),
+(23, 'img/product_3.png'),
+(24, 'img/product_2.png'),
+(25, 'img/product_2.png'),
+(26, 'img/product_2.png'),
+(27, 'img/product_7.png'),
+(28, 'img/product_8.png'),
+(29, 'img/product_9.png'),
+(30, 'img/product_3.png'),
+(31, 'img/product_1.png'),
+(32, 'img/product_2.png'),
+(33, 'img/product_3.png'),
+(34, 'img/product_4.png'),
+(35, 'img/product_3.png'),
+(36, 'img/product_9.png'),
+(37, 'img/product_7.png'),
+(38, 'img/product_8.png'),
+(39, 'img/product_9.png'),
+(40, 'img/product_4.png'),
+(41, 'img/product_4.png'),
+(42, 'img/product_4.png'),
+(43, 'img/product_3.png'),
+(44, 'img/product_4.png'),
+(45, 'img/product_5.png'),
+(46, 'img/product_6.png'),
+(47, 'img/product_7.png'),
+(48, 'img/product_8.png'),
+(49, 'img/product_4.png'),
+(50, 'img/product_5.png'),
+(51, 'img/product_1.png'),
+(52, 'img/product_5.png'),
+(53, 'img/product_3.png'),
+(54, 'img/product_4.png'),
+(55, 'img/product_5.png'),
+(56, 'img/product_5.png'),
+(57, 'img/product_5.png'),
+(58, 'img/product_8.png'),
+(59, 'img/product_9.png'),
+(60, 'img/product_6.png'),
+(61, 'img/product_1.png'),
+(62, 'img/product_6.png'),
+(63, 'img/product_6.png'),
+(64, 'img/product_6.png'),
+(65, 'img/product_5.png'),
+(66, 'img/product_6.png'),
+(67, 'img/product_7.png'),
+(68, 'img/product_8.png'),
+(69, 'img/product_9.png'),
+(70, 'img/product_1.png'),
+(71, 'img/product_1.png'),
+(72, 'img/product_2.png'),
+(73, 'img/product_3.png'),
+(74, 'img/product_4.png'),
+(75, 'img/product_5.png'),
+(76, 'img/product_6.png'),
+(77, 'img/product_7.png'),
+(78, 'img/product_8.png'),
+(79, 'img/product_7.png');
+
+   ```
+   
+
+</details>
+
+
+---
+
+<details>
+   <summary>
+
    ### -8. **Colormix - Mieszalnia farb** / 1 os.
    
    </summary>
