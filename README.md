@@ -30,7 +30,7 @@
    - Opis funkcjonalności:
         - Funkcja sortowania (z wyborem select) reagująca po wciśnięciu przycisku "Sortuj".
              - Opcje sortowania są następujące: `Od najdroższych do najtańszych`; `Od najtańszych do najdroższych`; `Ostatnio dodane`; `Ulubione`.
-        - Wyszukiwanie produktów z bazy danych i wyświetlanie ich w polu "najpopularniejsze produkty", wykorzystać należy `LIKE` w zapytaniu SQL.
+        - Wyszukiwanie produktów `po nazwie` z bazy danych i wyświetlanie ich w polu "najpopularniejsze produkty", wykorzystać należy `LIKE` w zapytaniu SQL.
         - Po kliknięciu serduszka przy produkcie, zostaje zmieniona kolumna `favorite` w tabeli `prodcuts` i wyświetla się w opcji sortowania po "ulubionych"
    - Baza danych:
 
