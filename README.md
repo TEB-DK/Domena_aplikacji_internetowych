@@ -999,7 +999,8 @@ COMMIT;
      <img src='https://www.thecolorapi.com/id?format=svg&hex=493FA7'> <p>#493FA7</p> 
      <img src='https://www.thecolorapi.com/id?format=svg&hex=1B2021'> <p>#1B2021</p> 
      <img src='https://www.thecolorapi.com/id?format=svg&hex=000000'> <p>#000000</p>
-     <img src='https://www.thecolorapi.com/id?format=svg&hex=FAFAFA'> <p>#FAFAFA</p> </div>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=FAFAFA'> <p>#FAFAFA</p>
+     <img src='https://www.thecolorapi.com/id?format=svg&hex=645E9D'> <p>#645E9D</p> </div>
 
 </details>
 
