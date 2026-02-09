@@ -10,6 +10,27 @@
 
 ## Projekty `zadaniowe`
 
+<details>
+   <summary>
+
+   ### -10. **Wycieczkowo - biuro podróży** / 1 os.
+      
+   </summary>
+
+   **Wygląd strony**
+   
+   - <img width="69%" alt="MacBook Pro 14_ - 1 (4)" src="https://github.com/user-attachments/assets/90263768-f5bc-4bd0-8275-6887c5e128cb" />
+
+
+   **Materiały od wykorzystania**
+   - Materiały: [Pliki](https://www.dropbox.com/scl/fo/icv1xlz3l6qybhrecs6ey/AOCU97XwIzNFztvqlnvVe9k?rlkey=x7zsfdtcbgr75vcnkr8fgqnix&st=go56cndj&dl=0)
+   - Ikony: [SVGRepo](https://svgrepo.com/)
+   - Kolorystyka: #194F82, #FFC10D, #FFFFFF, #000000
+   - Czcionka: [Gaegu](), [Fuzzy Bubbles]()
+   - Logo: <img width="282" alt="Group 7" src="https://github.com/user-attachments/assets/52ef3af3-6529-42eb-a614-9c31e550a4e1" />
+   - Opis funkcjonalności: Po wypełnieniu formularza należy przeprowadzić walidację w `JavaScript`, a nastepnie obliczoną wartość wypełnić w bloku powyżej kalkulatora podróży.
+   
+</details>
 
 <details>
    <summary>
