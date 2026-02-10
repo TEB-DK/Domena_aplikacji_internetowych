@@ -19,7 +19,8 @@
 
    **Wygląd strony**
    
-   - <img width="69%" alt="MacBook Pro 14_ - 1 (4)" src="https://github.com/user-attachments/assets/90263768-f5bc-4bd0-8275-6887c5e128cb" />
+   - <img width="69%" alt="MacBook Pro 14_ - 1 (5)" src="https://github.com/user-attachments/assets/25b62510-b254-430f-9d10-a2682306f9de" />
+
 
 
    **Materiały od wykorzystania**
