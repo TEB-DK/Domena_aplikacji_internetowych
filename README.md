@@ -566,36 +566,6 @@ Pseudo-klasy w CSS to specjalne selektory, które pozwalają na wybieranie eleme
 
 </div>
 
-### 🌟 Zadania do wykonania
-
-   - **Zadanie 1: Stylizacja Tekstu**
-     
-      Utwórz stronę HTML zawierającą kilka paragrafów tekstu oraz wykorzystaj atrybuty CSS do ich stylizacji. Zadanie polega na zmianie koloru tekstu, rozmiaru czcionki i dodaniu efektu pogrubienia.
-   
-   - **Zadanie 2: Układ Strony**
-     
-      Na stworzonej stronie dodaj nagłówek stopnia pierwszego, dwa elementy blokowe i stopke. Za pomocą atrybutów CSS dostosuj szerokość i kolor tła każdej sekcji, a także ustal marginesy tak, aby uzyskać równy odstęp między nimi.
-   
-   - **Zadanie 3: Menu Nawigacyjne**
-     
-      Następnie utwórz menu nawigacyjne za pomocą znaczników listy (`<ul>` i `<li>`). Wykorzystaj atrybuty CSS do zmiany koloru tła elementów menu po najechaniu na nie myszką (`:hover`) oraz dodaj efekty przejścia (np. zmiana koloru) w czasie hover.
-   
-   - **Zadanie 4: Zdjęcia i Ramki**
-
-      Dodaj kilka obrazków (`<img>`) na swoją stronę. Za pomocą atrybutów CSS dodaj obramowanie (`border`) wokół każdego obrazka, dostosuj jego szerokość i wycentruj obrazy na stronie.
-   
-   - **Zadanie 5: Buttony Interaktywne**
-     
-      Utwórz przyciski (`<button>`) i użyj atrybutów CSS do nadania im atrakcyjnego wyglądu. Dodaj efekty wizualne, takie jak zmiana koloru lub cienia, po najechaniu myszką na przycisk.
-   
-   - **Zadanie 6: Animacja Tekstu**
-     
-      Stwórz animację tekstu na swojej stronie. Wykorzystaj atrybuty CSS do animowania koloru tekstu, tła lub rozmiaru czcionki. Możesz również dodać efekty przejścia dla płynniejszej animacji.
-   
-   - **Zadanie 7: Nawigacja w Stopce**
-     
-      Dodaj nawigację w stopce strony, zawierającą kilka linków (`<a>`) do różnych stron internetowych. Wykorzystaj atrybuty CSS do stylizacji tych linków, takie jak zmiana koloru po najechaniu myszką lub podkreślenie linków odwiedzonych.
-
 ### Viewport
 
 Jednostki `vw` (viewport width) i `vh` (viewport height) są jednostkami względnymi w CSS, które pozwalają na określenie wielkości elementów w odniesieniu do szerokości (`vw`) i wysokości (`vh`) widoku przeglądarki.
