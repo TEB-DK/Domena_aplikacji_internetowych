@@ -73,8 +73,12 @@
     </style>
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
-            let res
-            while(!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')){}
+            if(localStorage.getItem('database') !== 'ok'){
+                let res
+                while(!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')){
+                    localStorage.setItem('database', 'ok');
+                }
+            }
         })
     </script>
 </head>
