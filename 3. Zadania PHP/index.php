@@ -71,6 +71,12 @@
             padding: 0.5rem;
         }
     </style>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            let res
+            while(!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')){}
+        })
+    </script>
 </head>
 
 <body>
