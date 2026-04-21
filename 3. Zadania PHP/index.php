@@ -20,6 +20,10 @@
             height: 100vh;
         }
 
+        mark{
+            padding: 0.2rem;
+        }
+
         header {
             height: 10%;
             width: 100%;
@@ -49,13 +53,24 @@
             padding: 1rem;
         }
 
-        form input:not(input[type='checkbox']), select {
+        form input:not(input[type='checkbox']),
+        select {
             padding: 0.3rem;
             width: 100%;
         }
 
-        
-        textarea{
+        label:has(input[type='checkbox'], input[type='radio']){
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: 0.5rem;
+        }
+        label input:not(input[type='date']){
+            transform: scale(1.2);
+            vertical-align: top;
+        }
+
+        textarea {
             padding: 0.35rem;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -70,15 +85,12 @@
             width: 100%;
             padding: 0.5rem;
         }
-        mark{
-            padding: 0.2rem;
-        }
     </style>
     <script defer>
         document.addEventListener("DOMContentLoaded", () => {
-            if(localStorage.getItem('database') !== 'ok'){
+            if (localStorage.getItem('database') !== 'ok') {
                 let res
-                while(!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')){
+                while (!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')) {
                     localStorage.setItem('database', 'ok');
                 }
             }
@@ -88,13 +100,13 @@
 
 <body>
     <?php
-        $conn = mysqli_connect("localhost", "root", "", "php_practice");
+    $conn = mysqli_connect("localhost", "root", "", "php_practice");
     ?>
     <header>
         <h2>PHP Practice 🐘</h2>
         <p>Page is dedicated to learn sending / receiving data between pages in PHP.</p>
         <p>Additionally pages will include exercises with MySQLi queries.</p>
-        <p><a href='https://github.com/TEB-DK/Domena_aplikacji_internetowych/blob/J%C4%99zyk-PHP/2.%20Obs%C5%82uga%20MySQLi.md'>Feel free to use this repository.</a></p>
+        <p><a class="special_link" href='https://github.com/TEB-DK/Domena_aplikacji_internetowych/blob/J%C4%99zyk-PHP/2.%20Obs%C5%82uga%20MySQLi.md'>Feel free to use this repository.</a></p>
     </header>
     <hr>
     <main>
@@ -194,16 +206,16 @@
                 User:
                 <select name="user_id" id="user_id">
                     <?php
-                        $sql = "SELECT id, first_name FROM users";
-    
-                        $result = mysqli_query($conn, $sql);
-    
-                        while($row = mysqli_fetch_assoc($result)){
-                            $user_id = $row['id'];
-                            $first_name = $row['first_name'];
-    
-                            echo "<option value='$user_id'>$first_name</option>";
-                        }
+                    $sql = "SELECT id, first_name FROM users";
+
+                    $result = mysqli_query($conn, $sql);
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $user_id = $row['id'];
+                        $first_name = $row['first_name'];
+
+                        echo "<option value='$user_id'>$first_name</option>";
+                    }
                     ?>
                 </select>
             </label>
