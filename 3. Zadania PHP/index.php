@@ -225,7 +225,7 @@
         </form>
         <!-- p7 -->
         <form>
-            <h3>p7. Display user and they exercises from database 😶‍🌫️</h3>
+            <h3>p7. Display user and their exercises from database 😶‍🌫️</h3>
             <sub>Redirect form into <mark>exercise/p7.php</mark> and display, with method <mark>GET</mark>.</sub>
             <sub title="Only thing you will need is id from table user and inner join to table exercise">Create correct form for this exercise.</sub>
             <span>
@@ -234,7 +234,7 @@
         </form>
         <!-- p8 -->
         <form>
-            <h3>p8. Delete user with his exercise ⚠️</h3>
+            <h3>p8. Delete user with their exercise ⚠️</h3>
             <sub>Redirect form into <mark>exercise/p8.php</mark>, with method <mark>POST</mark>.</sub>
             <sub title="Only thing you will need is id from table user and remember to remove first exercise">Create correct form for this exercise.</sub>
             <span>
