@@ -1,6 +1,8 @@
 # Przygotowanie środowiska PHP 🐘
 PHP jest językiem skryptowym, który jest szeroko stosowany w tworzeniu stron internetowych oraz aplikacji webowych. Jego popularność wynika z tego, że jest łatwy do nauki i ma wiele wbudowanych funkcji i bibliotek.
 
+## **Krok 1**
+
 ### ⬇️ Instalacja PHP 
 Aby rozpocząć programowanie w PHP, należy najpierw zainstalować PHP na swoim komputerze. Można to zrobić, pobierając pakiet XAMPP lub WAMP, który zawiera PHP, Apache i MySQL.
 
@@ -45,13 +47,35 @@ Proces instalacji PHP może różnić się w zależności od systemu operacyjneg
 
 </details>
 
+---
+
+## **Krok 2**
+
 Po zakończeniu instalacji PHP, możesz przetestować jego działanie, tworząc prosty skrypt PHP i uruchamiając go w przeglądarce internetowej.
 
 >[!IMPORTANT]
-> Następnie należy utworzyć folder z `nazwą projektu` w lokalizacji xamppa w folderze `htdocs`.
+> Aby utworzyć projekt w języku PHP:
+>
+> Należy utworzyć folder z `nazwa_projektu` w lokalizacji xamppa w folderze `htdocs`.
 >
 > Aby przejść do tego folderu należy wybrac `Explorer` w aplikacji xampp.
 >
-> **ORAZ PAMIĘTAĆ O URUCHOMIENIU USŁUGI `APACHE` i `MYSQL`**
-> <img width="835" height="542" alt="image" src="https://github.com/user-attachments/assets/d5586fe8-b888-4061-aaa3-7db474e49116" />
+> <img  height="450" alt="image" src="https://github.com/user-attachments/assets/1efc3a7b-d158-428c-a2bf-aba5f8ac9fa5" />
+>
+> <img  height="450" alt="image" src="https://github.com/user-attachments/assets/355502c9-e138-4a4a-8cba-9c57b1db04a2" />
+> 
+> Gdy to już mamy za sobą, należy uruchomić w xampp moduł `Apache` oraz `MySQL`.
+> 
+> <img height="450" alt="image" src="https://github.com/user-attachments/assets/d5586fe8-b888-4061-aaa3-7db474e49116" />
+
+
+---
+
+## **Krok 3**
+
+Uruchomienie naszego projektu należy teraz do kwestii przeglądarki.
+
+Aby otworzyć nasz projekt na stronie należy wejść na adres `localhost/nazwa_projektu`.
+
+<img height="450" alt="image" src="https://github.com/user-attachments/assets/46c780f9-431d-4c83-ae80-0d12719d742c" />
 
