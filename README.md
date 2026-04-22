@@ -14,7 +14,7 @@ Proces instalacji PHP może różnić się w zależności od systemu operacyjneg
 
 </summary>
 
-1. Pobierz plik instalacyjny PHP z oficjalnej strony internetowej: https://windows.php.net/download/
+1. Pobierz plik instalacyjny PHP z oficjalnej strony internetowej: [🔗 Apache friends](https://www.apachefriends.org/pl/index.html)
 
 2. Uruchom plik instalacyjny i postępuj zgodnie z instrukcjami na ekranie. Podczas instalacji wybierz wszystkie wymagane komponenty, takie jak serwer WWW Apache, jeśli chcesz zainstalować PHP jako moduł do Apache.
 
