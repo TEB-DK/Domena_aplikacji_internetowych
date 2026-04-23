@@ -14,7 +14,7 @@
 <details>
    <summary>
 
-   ### -11. **Jolanta** / 1 os.
+   ### -11. **Jolanta - Projekt testowy PHP** / 1 os.
       
    </summary>
 
