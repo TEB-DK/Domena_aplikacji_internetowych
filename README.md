@@ -9,19 +9,14 @@
 <div align='justify'>
 
 
+
+
 ## Projekty `zadaniowe`
 
-<details>
-   <summary>
-
-   ### -11. **Jolanta - Projekt testowy PHP** / 1 os.
-      
-   </summary>
-
-   <a href='https://gitfolderdownloader.github.io/api/?url=https://github.com/TEB-DK/Domena_aplikacji_internetowych/tree/Projekty/jolanta&name=jolanta' target='_blank'>Pobierz folder</a>
+### -11. **Jolanta - Projekt testowy PHP** / 1 os. <kbd>[⬇️ Pobierz projekt](https://gitfolderdownloader.github.io/api/?url=https://github.com/TEB-DK/Domena_aplikacji_internetowych/tree/Projekty/jolanta&name=jolanta)</kbd>
    
-</details>
 
+      
 ---
 
 <details>
