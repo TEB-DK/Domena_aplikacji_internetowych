@@ -14,7 +14,7 @@ if($zgoda == "on"){
 
 $sql = "INSERT INTO users VALUES (NULL, '$imie', $wiek, $zgoda)";
 
-if(mysqli_affected_rows($polaczenie) >= 1 && $zgoda = 1){
+if($zgoda == 1){
     mysqli_query($polaczenie, $sql);
     header("Location: index.php");
 }else{

@@ -16,15 +16,18 @@
             align-items: center;
             height: 100vh;
         }
-        body > hr{
+
+        body>hr {
             width: 80%;
             border-width: 2px;
         }
-        main{
+
+        main {
             display: flex;
             width: 100%;
             justify-content: space-around;
         }
+
         .container {
             padding: 30px;
             border-radius: 10px;
@@ -46,19 +49,24 @@
             text-align: center;
             color: #3f4b83;
         }
-        h1 button{
+
+        h1 button {
             margin-left: 0.3rem;
         }
 
         ol {
             padding: 0 1rem 1rem 1rem;
         }
-        ol li{
+
+        ol li {
             background-color: #4f5b9310;
             border-radius: 0.3rem;
+            
             /* list-style-type: '✅'; */
         }
-        ol > li > h4,p{
+
+        ol>li>h4,
+        p {
             padding-left: 1rem;
             padding-top: 0.5rem;
         }
@@ -109,6 +117,15 @@
         button:hover {
             background: #3c4674;
         }
+        .row{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            gap: 1rem;
+        }
+        .row form{
+            width: 40%;
+        }
     </style>
 </head>
 
@@ -119,18 +136,23 @@
     <hr>
     <main>
         <div class="container">
+
             <h3>Pokaż konkretnego użytkownika</h3>
             <hr>
             <form action="showuser.php" method="GET">
                 <input type="number" name="user_id" id="user_id" placeholder="Podaj ID użytkownika">
                 <button>Pokaż użytkownika</button>
             </form>
+
             <h3>Modyfikuj konkretnego użytkownika</h3>
             <hr>
-            <form action="modifyuser.php">
+            <form action="modifyuser2.php" method="POST">
                 <input type="number" name="user_id" id="user_id" placeholder="Podaj ID użytkownika">
+                <input type="number" name="wiek" id="wiek" placeholder="Podaj nowy wiek użytkownika">
                 <button>Modyfikuj użytkownika</button>
             </form>
+
+
             <h3>Usunięcie konkretnego użytkownika</h3>
             <hr>
             <form action="removeuser2.php" method="POST">
@@ -156,14 +178,20 @@
                     $zgoda = $wiersz['zgoda'];
 
                     echo "
-            <li>
-                <h4>Imię: $imie <sup>[ ID: $id ]</sup></h4>
-                <p>Wiek: $wiek</p>
-                <form action='removeuser.php' method='POST'>
-                    <input type='hidden' value=$id name='id'>
-                    <button>Usuń</button>
-                </form>
-            </li>";
+                        <li>
+                            <h4>Imię: $imie <sup>[ ID: $id ]</sup></h4>
+                            <p>Wiek: $wiek</p>
+                            <span class='row'>
+                                <form action='removeuser.php' method='POST'>
+                                    <input type='hidden' value=$id name='id'>
+                                    <button>Usuń</button>
+                                </form>
+                                <form action='modifyuser.php' method='POST'>
+                                    <input type='hidden' name='user_id' value=$id placeholder='Podaj ID użytkownika'>
+                                    <button>Modyfikuj</button>
+                                </form>
+                            </span>
+                        </li>";
                 }
                 ?>
             </ol>
