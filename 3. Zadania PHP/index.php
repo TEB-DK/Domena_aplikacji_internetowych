@@ -91,9 +91,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             if (localStorage.getItem('database') !== 'ok') {
                 let res
-                while (!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')) {
-                    localStorage.setItem('database', 'ok');
-                }
+                while (!(res = prompt("Before starting, please load `database.sql` into your phpmyadmin. \nType understood to close this window.") === 'understood')) {}
+                localStorage.setItem('database', 'ok');
             }
         })
     </script>
